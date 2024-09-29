@@ -1,0 +1,13 @@
+logging:
+  level:
+    root: info
+    fi.tuni: debug
+
+server:
+  port: 8080
+
+springdoc:
+  api-docs:
+    path: /openapi
+  swagger-ui:
+    path: /swagger-ui.html

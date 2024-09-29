@@ -1,0 +1,76 @@
+openapi: 3.0.1
+info:
+  title: Java service
+  contact:
+    name: Dávid Laurovič
+    email: 553651@muni.cz
+  license:
+    name: Apache 2.0
+    url: https://www.apache.org/licenses/LICENSE-2.0.html
+  version: "1.1"
+servers:
+- url: "{scheme}://{server}:{port}"
+  variables:
+    scheme:
+      enum:
+      - http
+      - https
+      default: http
+    server:
+      default: localhost
+    port:
+      default: "8080"
+tags:
+- name: SystemInfo
+  description: Controller for system information
+paths:
+  /:
+    get:
+      tags:
+      - SystemInfo
+      summary: "Get information about system including IP address, running processes,\
+        \ disk space and time since last boot"
+      operationId: getInformation
+      responses:
+        "500":
+          description: Unexpected server error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorDTO'
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/SystemInfoDTO'
+components:
+  schemas:
+    ErrorDTO:
+      type: object
+      properties:
+        errorMessage:
+          type: string
+          description: Error message
+          example: Invalid format for the value '41' of the key 'ID'.
+    SystemInfoDTO:
+      type: object
+      properties:
+        ipAddress:
+          type: string
+          description: IP Adress of container
+          example: 207.11.119.205
+        processes:
+          type: array
+          description: List of running processes
+          items:
+            type: string
+            description: List of running processes
+        diskSpace:
+          type: string
+          description: Available disk space
+        lastBootTime:
+          type: string
+          description: Time since last boot
