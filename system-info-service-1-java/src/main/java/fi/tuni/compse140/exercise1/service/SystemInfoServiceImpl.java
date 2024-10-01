@@ -5,7 +5,6 @@ import fi.tuni.compse140.exercise1.exception.InternalException;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.springframework.stereotype.Service;
-import org.springframework.util.unit.DataSize;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -34,7 +33,7 @@ public class SystemInfoServiceImpl implements SystemInfoService {
     @Override
     public List<String[]> getRunningProcesses() {
         try {
-            ProcessBuilder processBuilder = new ProcessBuilder("ps", "-a");
+            ProcessBuilder processBuilder = new ProcessBuilder("ps");
             Process process = processBuilder.start();
             BufferedReader reader = new BufferedReader(new InputStreamReader(process.getInputStream()));
             return reader.lines().skip(1)
@@ -51,7 +50,7 @@ public class SystemInfoServiceImpl implements SystemInfoService {
         try {
             FileStore store = Files.getFileStore(Path.of("/"));
             long bytes = store.getUsableSpace();
-            return DataSize.ofBytes(bytes).toMegabytes();
+            return bytes / (1024 * 1024);
         } catch (Exception e) {
             LOG.error(ExceptionConstants.DISK_SPACE_EXCEPTION, e);
             throw new InternalException(ExceptionConstants.DISK_SPACE_EXCEPTION);
