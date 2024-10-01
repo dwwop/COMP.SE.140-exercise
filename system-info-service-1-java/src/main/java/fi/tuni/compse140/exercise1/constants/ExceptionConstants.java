@@ -5,4 +5,5 @@ public class ExceptionConstants {
     public static String PROCESSES_EXCEPTION = "Exception occured when reading running processes";
     public static String DISK_SPACE_EXCEPTION = "Exception occured when reading disk space";
     public static String UP_TIME_EXCEPTION = "Exception occured when reading up time";
+    public static String SERVICE_2_EXCEPTION = "Error during communication with Service 2";
 }
