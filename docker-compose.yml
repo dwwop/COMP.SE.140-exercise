@@ -1,9 +1,9 @@
 services:
   system-info-service-1-java:
     build:
-      context: .
+      context: ./system-info-service-1-java
       target: system-info-service-1-java
-    image: mms/system-info-service-1-java
+    image: exercise1/system-info-service-1-java
     container_name: system-info-service-1-java
     ports:
       - "8199:8080"
