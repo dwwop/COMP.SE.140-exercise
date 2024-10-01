@@ -54,7 +54,28 @@ components:
         errorMessage:
           type: string
           description: Error message
-          example: Invalid format for the value '41' of the key 'ID'.
+          example: Exception occurred when reading address id
+    ProcessDTO:
+      type: object
+      properties:
+        pid:
+          type: integer
+          description: ID of the process
+          format: int64
+          example: 2
+        user:
+          type: string
+          description: Terminal associated with the process
+          example: root
+        time:
+          type: string
+          description: Minutes and seconds the process has been running
+          example: 01:13
+        command:
+          type: string
+          description: Command that started the process
+          example: whoami
+      description: List of running processes
     SystemInfoDTO:
       type: object
       properties:
@@ -66,11 +87,14 @@ components:
           type: array
           description: List of running processes
           items:
-            type: string
-            description: List of running processes
+            $ref: '#/components/schemas/ProcessDTO'
         diskSpace:
-          type: string
-          description: Available disk space
+          type: integer
+          description: Available disk space in MB
+          format: int64
+          example: 12
         lastBootTime:
-          type: string
-          description: Time since last boot
+          type: number
+          description: Time since last boot in seconds
+          format: double
+          example: 5541.3
