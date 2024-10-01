@@ -1,0 +1,101 @@
+openapi: 3.0.1
+info:
+  title: System Info Service 2 - DotNet
+  description: "
+Service2 provides system information such as its IP address, running processes, available disk space, and uptime. It is not directly accessible by external clients."
+  contact:
+    name: Dávid Laurovič
+    email: david.laurovic@tuni.fi
+  license:
+    name: Apache 2.0
+    url: https://www.apache.org/licenses/LICENSE-2.0.html
+  version: "1.0"
+servers:
+- url: "{scheme}://{server}:{port}"
+  variables:
+    scheme:
+      default: http
+      enum:
+      - http
+    server:
+      default: localhost
+    port:
+      default: "80"
+tags:
+- name: SystemInfo
+  description: Controller for system information
+paths:
+  /:
+    get:
+      tags:
+      - SystemInfo
+      summary: "Get information about system including IP address, running processes,\
+        \ disk space and time since last boot."
+      operationId: getInformation
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/SystemInfoDTO'
+        "500":
+          description: Unexpected server error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorDTO'
+components:
+  schemas:
+    ErrorDTO:
+      type: object
+      properties:
+        errorMessage:
+          type: string
+          description: Error message
+          example: Exception occurred when reading address id
+    ProcessDTO:
+      type: object
+      properties:
+        pid:
+          type: integer
+          description: ID of the process
+          format: int64
+          example: 2
+        user:
+          type: string
+          description: Terminal associated with the process
+          example: root
+        time:
+          type: string
+          description: Minutes and seconds the process has been running
+          example: 01:13
+        command:
+          type: string
+          description: Command that started the process
+          example: whoami
+      description: List of running processes
+    SystemInfoDTO:
+      type: object
+      properties:
+        ipAddress:
+          type: string
+          description: IP Adress of container
+          example: 207.11.119.205
+        processes:
+          type: array
+          description: List of running processes
+          items:
+            $ref: '#/components/schemas/ProcessDTO'
+        diskSpace:
+          type: integer
+          description: Available disk space in MB
+          format: int64
+          example: 12
+        lastBootTime:
+          type: number
+          description: Time since last boot in seconds
+          format: double
+          example: 5541.3

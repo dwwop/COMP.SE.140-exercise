@@ -2,12 +2,24 @@ services:
   system-info-service-1-java:
     build:
       context: ./system-info-service-1-java
-      target: system-info-service-1-java
-    image: exercise1/system-info-service-1-java
+    image: laurovic-exercise1/system-info-service-1-java
     container_name: system-info-service-1-java
     ports:
       - "8199:8080"
     restart: on-failure
+    networks:
+      - exercise
+
+  api:
+    build:
+      context: ./system-info-service-2-dotnet
+      dockerfile: /src/SystemInfoService2Dotnet/Dockerfile
+    image: laurovic-exercise1/system-info-service-2-dotnet
+    container_name: system-info-service-2-dotnet
+    ports:
+      - "80:80"
+    environment:
+      - ASPNETCORE_HTTP_PORTS=80
     networks:
       - exercise
 
