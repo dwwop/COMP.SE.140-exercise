@@ -20,7 +20,7 @@ servers:
     server:
       default: localhost
     port:
-      default: "80"
+      default: "8080"
 tags:
 - name: SystemInfo
   description: Controller for system information

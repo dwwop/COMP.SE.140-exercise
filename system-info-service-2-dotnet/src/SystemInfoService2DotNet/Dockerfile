@@ -17,7 +17,6 @@ RUN dotnet publish "SystemInfoService2DotNet.csproj" -c $BUILD_CONFIGURATION -o 
 FROM base AS final
 WORKDIR /app
 COPY --from=publish /app/publish .
-EXPOSE 80
 ENTRYPOINT ["dotnet", "SystemInfoService2DotNet.dll"]
 
 
