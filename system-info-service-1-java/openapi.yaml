@@ -1,25 +1,29 @@
 openapi: 3.0.1
 info:
-  title: Java service
+  title: System Info Service 1 - Java
+  description: "Service1 acts as an accessible HTTP server, responding to external\
+    \ client requests by collecting system information from both itself and Service2.\
+    \ It communicates with Service2 to retrieve its IP address, running processes,\
+    \ available disk space, and uptime, and returns the combined data to the client."
   contact:
     name: Dávid Laurovič
-    email: 553651@muni.cz
+    email: david.laurovic@tuni.fi
   license:
     name: Apache 2.0
     url: https://www.apache.org/licenses/LICENSE-2.0.html
-  version: "1.1"
+  version: "1.0"
 servers:
 - url: "{scheme}://{server}:{port}"
   variables:
     scheme:
+      default: http
       enum:
       - http
       - https
-      default: http
     server:
       default: localhost
     port:
-      default: "8080"
+      default: "8199"
 tags:
 - name: SystemInfo
   description: Controller for system information
@@ -29,15 +33,10 @@ paths:
       tags:
       - SystemInfo
       summary: "Get information about system including IP address, running processes,\
-        \ disk space and time since last boot"
+        \ disk space and time since last boot. Include the same information from service\
+        \ 2"
       operationId: getInformation
       responses:
-        "500":
-          description: Unexpected server error
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/ErrorDTO'
         "200":
           description: OK
           content:
@@ -46,6 +45,12 @@ paths:
                 type: array
                 items:
                   $ref: '#/components/schemas/SystemInfoDTO'
+        "500":
+          description: Unexpected server error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorDTO'
 components:
   schemas:
     ErrorDTO:
