@@ -21,7 +21,7 @@ import static fi.tuni.compse140.exercise1.constants.HTTPConstants.*;
 @Tag(name = "SystemInfo", description = "Controller for system information")
 @RequestMapping(value = "/", produces = MediaType.APPLICATION_JSON_VALUE)
 public interface SystemInfoController {
-    String GET_SYSTEM_INFO = "Get information about system including IP address, running processes, disk space and time since last boot";
+    String GET_SYSTEM_INFO = "Get information about system including IP address, running processes, disk space and time since last boot. Include the same information from service 2";
 
 
     @GetMapping

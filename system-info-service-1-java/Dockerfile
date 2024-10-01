@@ -4,7 +4,7 @@ WORKDIR /app
 COPY . .
 RUN mvn -DskipTests clean package
 
-FROM eclipse-temurin:23-jre-alpine AS java-service
+FROM eclipse-temurin:23-jre-alpine AS system-info-service-1-java
 COPY --from=build /app/target/*.jar /app.jar
 EXPOSE 8080
 ENTRYPOINT ["java", "-jar", "/app.jar"]
