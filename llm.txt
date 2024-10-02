@@ -1,0 +1,10 @@
+I have used ChatGPT for this assignment. I've used it, because i find it faster when finding general answers regarding formatting, language syntax and method usage. Most of the time I only use the code snippet of the answer and I do not copy paste it in its raw form. The LLM helped, because the answers are better fitted to my specific question than general answer posted on a forum like StackOverflow. 
+
+Exemplary prompts include:
+- java deserialize list of dtos using objectmapper
+- c# split string on whitespace, remove empty entries, split into 4
+- java log4j logger get instance
+
+In general, I have the experience of LLMs hallucinating and making mistakes the more special the knowledge you need is. Examples of this include making up libraries, method names. 
+
+The LLM does not provide good feedback when debugging a specific error and providing dependency information (library or image versions and their combability, defining maven dependencies and plugins). I do not use LLMs for this use cases as I find it faster to google the answers as most of the time someone else has experienced it before.

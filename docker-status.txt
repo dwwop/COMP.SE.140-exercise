@@ -1,0 +1,11 @@
+> docker container ls
+CONTAINER ID   IMAGE                                             COMMAND                  CREATED         STATUS         PORTS                    NAMES
+7343e58c0cf5   laurovic-exercise1/system-info-service-1-java     "java -jar /app.jar"     2 minutes ago   Up 2 minutes   0.0.0.0:8199->8080/tcp   system-info-service-1-java
+8a631fbd2b8b   laurovic-exercise1/system-info-service-2-dotnet   "dotnet SystemInfoSe…"   2 minutes ago   Up 2 minutes                            system-info-service-2-dotnet
+
+> docker network ls
+NETWORK ID     NAME                 DRIVER    SCOPE
+7cf9d972f0ea   bridge               bridge    local
+0360812ce073   exercise1_exercise   bridge    local
+05cf7d1682b5   host                 host      local
+89ea770810cf   none                 null      local

@@ -1,0 +1,1 @@
+I've discovered that the container shares its disk space and time since last boot with the underlying operating system. The processes are isolated. From inside the container, you are not able to see other running processes on the machine. Also the container has its own IP address, which may be on a different subnet than the host's address
