@@ -1,5 +1,5 @@
 services:
-  system-info-service-1-java:
+  service-1:
     build:
       context: ./system-info-service-1-java
     image: laurovic-exercise1/system-info-service-1-java
@@ -12,7 +12,7 @@ services:
     networks:
       - exercise
 
-  api:
+  service-2:
     build:
       context: ./system-info-service-2-dotnet
       dockerfile: src/SystemInfoService2DotNet/Dockerfile

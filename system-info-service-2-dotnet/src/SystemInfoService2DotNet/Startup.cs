@@ -9,6 +9,7 @@ using Microsoft.OpenApi.Models;
 using Newtonsoft.Json.Converters;
 using Newtonsoft.Json.Serialization;
 using SystemInfoService2DotNet.Facades;
+using SystemInfoService2DotNet.Handlers;
 using SystemInfoService2DotNet.Services;
 
 namespace SystemInfoService2DotNet;
@@ -62,9 +63,10 @@ public class Startup
         services
             .AddSwaggerGenNewtonsoftSupport();
 
-        services.AddAutoMapper(Assembly.GetExecutingAssembly());
         services.AddScoped<ISystemInfoFacade, SystemInfoFacade>();
         services.AddScoped<ISystemInfoService, SystemInfoService>();
+        services.AddLogging();
+        services.AddExceptionHandler<InternalExceptionHandler>();
     }
 
     /// <summary>
@@ -74,6 +76,7 @@ public class Startup
     /// <param name="env"></param>
     public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
     {
+        app.UseExceptionHandler("/Error");
         if (env.IsDevelopment())
             app.UseDeveloperExceptionPage();
         else
