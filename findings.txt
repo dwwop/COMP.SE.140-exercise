@@ -1,1 +1,7 @@
-I've discovered that the container shares its disk space and time since last boot with the underlying operating system. The processes are isolated. From inside the container, you are not able to see other running processes on the machine. Also the container has its own IP address, which may be on a different subnet than the host's address
+The container shares its disk space information with the host machine. However, the files and directories of the host are not accessible from within the container unless we give access to them by binding them using volumes or mounts.
+
+The container shares it's uptime with the host machine.
+
+The processes are isolated from the host machine. From inside the container, you are not able to see other running processes on the host. However if use "--pid=host" option, the processess running inside the container will be visible to the host. 
+
+The container has its own IP address, which in the private range of subnet 172.17.0.0/16. If we want to access the containers from outside, we need to map the ports inside docker compose or use option "-p {host port}:{container port}". If we use option "--network=host", then the container will be inside the host network meaning that all the container's ports are listening on the host.
