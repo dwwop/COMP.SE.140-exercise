@@ -20,6 +20,7 @@ services:
     container_name: system-info-service-2-dotnet
     environment:
       - ASPNETCORE_HTTP_PORTS=8080
+    restart: on-failure
     networks:
       - exercise
 
