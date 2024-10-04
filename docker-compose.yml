@@ -15,7 +15,6 @@ services:
   service-2:
     build:
       context: ./system-info-service-2-dotnet
-      dockerfile: src/SystemInfoService2DotNet/Dockerfile
     image: laurovic-exercise1/system-info-service-2-dotnet
     container_name: system-info-service-2-dotnet
     environment:
