@@ -2,7 +2,6 @@ services:
   service-1:
     build:
       context: ./system-info-service-1-java
-    image: laurovic-exercise1/system-info-service-1-java
     environment:
       - SERVICE_2_HOST=system-info-service-2-dotnet:8080
     restart: on-failure
@@ -15,7 +14,6 @@ services:
   service-2:
     build:
       context: ./system-info-service-2-dotnet
-    image: laurovic-exercise1/system-info-service-2-dotnet
     container_name: system-info-service-2-dotnet
     environment:
       - ASPNETCORE_HTTP_PORTS=8080
@@ -31,6 +29,7 @@ services:
     volumes:
       - ./nginx/nginx.conf:/etc/nginx/nginx.conf
       - ./nginx/.htpasswd:/etc/nginx/.htpasswd
+      - ./nginx/html:/usr/share/nginx/html
     networks:
       - exercise
     depends_on:

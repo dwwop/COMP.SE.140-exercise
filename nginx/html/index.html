@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <style>
+        /* styles.css */
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f4f4f9;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            margin: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        textarea {
+            width: 100%;
+            max-width: 600px;
+            padding: 10px;
+            margin-top: 10px;
+            font-size: 14px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            resize: none;
+        }
+
+        #responseText {
+            background-color: #fff;
+        }
+
+        button:active {
+            transform: scale(0.98);
+        }
+
+        button {
+            display: inline-block;
+        }
+    </style>
+
+    <script>
+        function sendRequest() {
+            fetch('/service1')
+                .then(response => response.text())
+                .then(data => document.getElementById('responseText').value = JSON.stringify(JSON.parse(data), undefined, 4));
+        }
+        function stopSystem() {
+            fetch('/shutdown', { method: 'POST' });
+        }
+    </script>
+</head>
+
+<body>
+    <div class="button-container">
+        <button onclick="sendRequest()">REQUEST</button>
+        <button onclick="stopSystem()">STOP</button>
+    </div>
+    <textarea id="responseText" cols=50 rows=10 disabled class="language-json"></textarea>
+</body>
+
+</html>
