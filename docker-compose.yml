@@ -1,3 +1,5 @@
+name: laurovic-exercise
+
 services:
   service-1:
     build:
@@ -14,7 +16,6 @@ services:
   service-2:
     build:
       context: ./system-info-service-2-dotnet
-    container_name: system-info-service-2-dotnet
     environment:
       - ASPNETCORE_HTTP_PORTS=8080
     restart: on-failure
@@ -22,14 +23,15 @@ services:
       - exercise
 
   nginx:
-    image: nginx:latest
-    container_name: nginx
+    build:
+      context: ./nginx
     ports:
       - "8081:80"
     volumes:
       - ./nginx/nginx.conf:/etc/nginx/nginx.conf
       - ./nginx/.htpasswd:/etc/nginx/.htpasswd
       - ./nginx/html:/usr/share/nginx/html
+      - /var/run/docker.sock:/var/run/docker.sock
     networks:
       - exercise
     depends_on:
