@@ -5,7 +5,7 @@ services:
     build:
       context: ./system-info-service-1-java
     environment:
-      - SERVICE_2_HOST=system-info-service-2-dotnet:8080
+      - SERVICE_2_HOST=service-2:8080
     restart: on-failure
     networks:
       - exercise
