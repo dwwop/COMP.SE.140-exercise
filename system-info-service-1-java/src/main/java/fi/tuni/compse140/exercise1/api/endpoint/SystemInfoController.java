@@ -22,7 +22,7 @@ import static fi.tuni.compse140.exercise1.constants.HTTPConstants.*;
 @Tag(name = "SystemInfo", description = "Controller for system information")
 @RequestMapping(value = "/", produces = MediaType.APPLICATION_JSON_VALUE)
 public interface SystemInfoController {
-    String GET_SYSTEM_INFO = "Get information about system including IP address, running processes, disk space and time since last boot. Include the same information from service 2";
+    String GET_SYSTEM_INFO = "Get information about system including IP address, running processes, disk space and time since last boot. Include the same information from service 2. Method becomes unavailable for 2s after processing a request";
     String SHUTDOWN = "Shutdowns service 2s after receiving request";
 
     @GetMapping
@@ -35,6 +35,10 @@ public interface SystemInfoController {
                     responseCode = SERVER_ERROR,
                     description = SERVER_ERROR_DESCRIPTION,
                     content = @Content(schema = @Schema(implementation = ErrorDTO.class))),
+            @ApiResponse(
+                    responseCode = UNAVAILABLE,
+                    description = UNAVAILABLE_DESCRIPTION,
+                    content = @Content())
     })
     ResponseEntity<List<SystemInfoDTO>> getInformation();
 

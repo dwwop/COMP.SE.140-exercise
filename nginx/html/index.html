@@ -57,9 +57,10 @@
 
     <script>
         function sendRequest() {
+            document.getElementById('responseText').value = "";
             fetch('/service1')
                 .then(response => response.text())
-                .then(data => document.getElementById('responseText').value = JSON.stringify(JSON.parse(data), undefined, 4));
+                .then(data => { if (data) { document.getElementById('responseText').value = JSON.stringify(JSON.parse(data), undefined, 4) } });
         }
         function stopSystem() {
             fetch('/shutdown', { method: 'POST' });
