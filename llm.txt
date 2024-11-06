@@ -4,6 +4,7 @@ Exemplary prompts include:
 - java deserialize list of dtos using objectmapper
 - c# split string on whitespace, remove empty entries, split into 4
 - java log4j logger get instance
+- generate css code to prettify this html page
 
 In general, I have the experience of LLMs hallucinating and making mistakes the more special the knowledge you need is. Examples of this include making up libraries, method names. 
 
