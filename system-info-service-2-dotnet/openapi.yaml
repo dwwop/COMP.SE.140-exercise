@@ -25,6 +25,21 @@ tags:
 - name: SystemInfo
   description: Controller for system information
 paths:
+  /shutdown:
+    post:
+      tags:
+        - SystemInfo
+      summary: Shutdowns service 2s after receiving request
+      operationId: shutdown
+      responses:
+        "204":
+          description: No Content
+        "500":
+          description: Unexpected server error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorDTO'
   /:
     get:
       tags:

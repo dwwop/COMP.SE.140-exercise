@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Linq;
+using System.Threading;
 using SystemInfoService2DotNet.Models;
 using SystemInfoService2DotNet.Services;
 
@@ -20,5 +21,14 @@ public class SystemInfoFacade(ISystemInfoService systemInfoService) : ISystemInf
         var uptime = systemInfoService.GetUptime();
 
         return new SystemInfoDTO(ipAddress, processes, diskSpace, uptime);
+    }
+
+    public void Shutdown()
+    {
+        new Thread(() =>
+        {
+            Thread.Sleep(2000);
+            Environment.Exit(0);
+        }).Start();
     }
 }

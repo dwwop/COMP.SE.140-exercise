@@ -25,4 +25,20 @@ public class SystemInfoApiController(ISystemInfoFacade facade) : ControllerBase
     {
         return Ok(new List<SystemInfoDTO> { facade.GetSystemInfo() });
     }
+
+    /// <summary>
+    ///     Shutdowns service 2s after receiving request
+    /// </summary>
+    /// <response code="200">OK</response>
+    /// <response code="500">Unexpected server error</response>
+    [HttpPost]
+    [Route("/shutdown")]
+    [SwaggerOperation("Shutdown")]
+    [SwaggerResponse(204)]
+    [SwaggerResponse(500, type: typeof(ErrorDTO), description: "Unexpected server error")]
+    public virtual IActionResult Shutdown()
+    {
+        facade.Shutdown();
+        return NoContent();
+    }
 }
