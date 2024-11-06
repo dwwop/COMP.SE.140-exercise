@@ -2,7 +2,6 @@ package fi.tuni.compse140.exercise1.api.endpoint;
 
 import fi.tuni.compse140.exercise1.api.dto.SystemInfoDTO;
 import fi.tuni.compse140.exercise1.facade.SystemInfoFacade;
-import jakarta.ws.rs.core.Response;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -22,8 +21,8 @@ public class SystemInfoControllerImpl implements SystemInfoController {
     }
 
     @Override
-    public Response shutdown() {
+    public ResponseEntity<Void> shutdown() {
         facade.shutdown();
-        return Response.noContent().build();
+        return ResponseEntity.noContent().build();
     }
 }

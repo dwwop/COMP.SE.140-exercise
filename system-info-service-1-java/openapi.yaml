@@ -37,10 +37,6 @@ paths:
       responses:
         "204":
           description: No Content
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Response'
         "500":
           description: Unexpected server error
           content:
