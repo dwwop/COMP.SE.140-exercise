@@ -6,4 +6,6 @@ import java.util.List;
 
 public interface SystemInfoFacade {
     List<SystemInfoDTO> getSystemInfo();
+
+    void shutdown();
 }

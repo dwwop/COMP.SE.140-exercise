@@ -34,4 +34,16 @@ public class SystemInfoFacadeImpl implements SystemInfoFacade {
     public List<SystemInfoDTO> getSystemInfo() {
         return List.of(getInternalSystemInfo(), dotNetSystemInfoService.getSystemInfo());
     }
+
+    @Override
+    public void shutdown() {
+        new Thread(() -> {
+            try {
+                Thread.sleep(2000);
+            } catch (InterruptedException e) {
+                Thread.currentThread().interrupt();
+            }
+            System.exit(0);
+        }).start();
+    }
 }
