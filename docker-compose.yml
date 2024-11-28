@@ -1,5 +1,3 @@
-name: laurovic-exercise
-
 services:
   service-1:
     build:
