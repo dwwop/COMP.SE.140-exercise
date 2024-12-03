@@ -1,4 +1,5 @@
 stages:
+  - static-analysis
   - build
   - deploy
 
@@ -17,6 +18,23 @@ build:
     paths:
       - ./
     expire_in: 1 hour
+    
+static-analysis:
+  stage: static-analysis
+  tags:
+    - project
+  image:
+    maven:3.9.9-eclipse-temurin-23
+  script:
+    - cd system-info-service-1-java
+    - mvn checkstyle:checkstyle
+    - mvn de.chkal.maven:gitlab-code-quality-plugin:generate
+  artifacts:
+    name: "static-analysis-results"
+    reports:
+      codequality:
+        - system-info-service-1-java/target/gl-code-quality-report.json
+    expire_in: 1 hour
 
 deploy:
   stage: deploy
@@ -24,3 +42,5 @@ deploy:
     - project
   script:
     - $DOCKER_COMPOSE_COMMAND up -d
+  needs:
+    - build
