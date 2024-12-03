@@ -1,5 +1,6 @@
 stages:
   - build
+  - deploy
 
 variables:
   DOCKER_COMPOSE_COMMAND: docker compose -f docker-compose.yml
@@ -16,3 +17,10 @@ build:
     paths:
       - ./
     expire_in: 1 hour
+
+deploy:
+  stage: deploy
+  tags:
+    - project
+  script:
+    - $DOCKER_COMPOSE_COMMAND up -d
