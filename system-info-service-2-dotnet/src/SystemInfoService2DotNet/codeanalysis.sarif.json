@@ -1,0 +1,2384 @@
+{
+  "$schema": "http://json.schemastore.org/sarif-1.0.0",
+  "version": "1.0.0",
+  "runs": [
+    {
+      "tool": {
+        "name": "Microsoft (R) Visual C# Compiler",
+        "version": "4.10.0.0",
+        "fileVersion": "4.10.0-3.24216.12 (3af0081a)",
+        "semanticVersion": "4.10.0",
+        "language": "sk-SK"
+      },
+      "results": [
+        {
+          "ruleId": "CS1591",
+          "level": "warning",
+          "message": "Missing XML comment for publicly visible type or member 'ISystemInfoFacade'",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///D:/Programovanie/MUNI/9.semester/DevOps/Exercise1/system-info-service-2-dotnet/src/SystemInfoService2DotNet/Facades/ISystemInfoFacade.cs",
+                "region": {
+                  "startLine": 5,
+                  "startColumn": 18,
+                  "endLine": 5,
+                  "endColumn": 35
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 4
+          }
+        },
+        {
+          "ruleId": "CS1591",
+          "level": "warning",
+          "message": "Missing XML comment for publicly visible type or member 'ISystemInfoFacade.GetSystemInfo()'",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///D:/Programovanie/MUNI/9.semester/DevOps/Exercise1/system-info-service-2-dotnet/src/SystemInfoService2DotNet/Facades/ISystemInfoFacade.cs",
+                "region": {
+                  "startLine": 7,
+                  "startColumn": 26,
+                  "endLine": 7,
+                  "endColumn": 39
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 4
+          }
+        },
+        {
+          "ruleId": "CS1591",
+          "level": "warning",
+          "message": "Missing XML comment for publicly visible type or member 'ISystemInfoFacade.Shutdown()'",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///D:/Programovanie/MUNI/9.semester/DevOps/Exercise1/system-info-service-2-dotnet/src/SystemInfoService2DotNet/Facades/ISystemInfoFacade.cs",
+                "region": {
+                  "startLine": 8,
+                  "startColumn": 17,
+                  "endLine": 8,
+                  "endColumn": 25
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 4
+          }
+        },
+        {
+          "ruleId": "CS1591",
+          "level": "warning",
+          "message": "Missing XML comment for publicly visible type or member 'SystemInfoFacade.GetSystemInfo()'",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///D:/Programovanie/MUNI/9.semester/DevOps/Exercise1/system-info-service-2-dotnet/src/SystemInfoService2DotNet/Facades/SystemInfoFacade.cs",
+                "region": {
+                  "startLine": 15,
+                  "startColumn": 26,
+                  "endLine": 15,
+                  "endColumn": 39
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 4
+          }
+        },
+        {
+          "ruleId": "CS1591",
+          "level": "warning",
+          "message": "Missing XML comment for publicly visible type or member 'SystemInfoFacade.Shutdown()'",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///D:/Programovanie/MUNI/9.semester/DevOps/Exercise1/system-info-service-2-dotnet/src/SystemInfoService2DotNet/Facades/SystemInfoFacade.cs",
+                "region": {
+                  "startLine": 26,
+                  "startColumn": 17,
+                  "endLine": 26,
+                  "endColumn": 25
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 4
+          }
+        },
+        {
+          "ruleId": "CS1591",
+          "level": "warning",
+          "message": "Missing XML comment for publicly visible type or member 'InternalExceptionHandler'",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///D:/Programovanie/MUNI/9.semester/DevOps/Exercise1/system-info-service-2-dotnet/src/SystemInfoService2DotNet/Handlers/InternalExceptionHandler.cs",
+                "region": {
+                  "startLine": 12,
+                  "startColumn": 14,
+                  "endLine": 12,
+                  "endColumn": 38
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 4
+          }
+        },
+        {
+          "ruleId": "CS1591",
+          "level": "warning",
+          "message": "Missing XML comment for publicly visible type or member 'InternalExceptionHandler.InternalExceptionHandler(ILogger<InternalExceptionHandler>)'",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///D:/Programovanie/MUNI/9.semester/DevOps/Exercise1/system-info-service-2-dotnet/src/SystemInfoService2DotNet/Handlers/InternalExceptionHandler.cs",
+                "region": {
+                  "startLine": 12,
+                  "startColumn": 14,
+                  "endLine": 12,
+                  "endColumn": 38
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 4
+          }
+        },
+        {
+          "ruleId": "CS1591",
+          "level": "warning",
+          "message": "Missing XML comment for publicly visible type or member 'InternalExceptionHandler.TryHandleAsync(HttpContext, Exception, CancellationToken)'",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///D:/Programovanie/MUNI/9.semester/DevOps/Exercise1/system-info-service-2-dotnet/src/SystemInfoService2DotNet/Handlers/InternalExceptionHandler.cs",
+                "region": {
+                  "startLine": 18,
+                  "startColumn": 34,
+                  "endLine": 18,
+                  "endColumn": 48
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 4
+          }
+        },
+        {
+          "ruleId": "CS1591",
+          "level": "warning",
+          "message": "Missing XML comment for publicly visible type or member 'ErrorDTO.operator ==(ErrorDTO, ErrorDTO)'",
+          "suppressionStates": [
+            "suppressedInSource"
+          ],
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///D:/Programovanie/MUNI/9.semester/DevOps/Exercise1/system-info-service-2-dotnet/src/SystemInfoService2DotNet/Models/ErrorDTO.cs",
+                "region": {
+                  "startLine": 91,
+                  "startColumn": 33,
+                  "endLine": 91,
+                  "endColumn": 35
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 4
+          }
+        },
+        {
+          "ruleId": "CS1591",
+          "level": "warning",
+          "message": "Missing XML comment for publicly visible type or member 'ErrorDTO.operator !=(ErrorDTO, ErrorDTO)'",
+          "suppressionStates": [
+            "suppressedInSource"
+          ],
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///D:/Programovanie/MUNI/9.semester/DevOps/Exercise1/system-info-service-2-dotnet/src/SystemInfoService2DotNet/Models/ErrorDTO.cs",
+                "region": {
+                  "startLine": 96,
+                  "startColumn": 33,
+                  "endLine": 96,
+                  "endColumn": 35
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 4
+          }
+        },
+        {
+          "ruleId": "CS1591",
+          "level": "warning",
+          "message": "Missing XML comment for publicly visible type or member 'ProcessDTO.operator ==(ProcessDTO, ProcessDTO)'",
+          "suppressionStates": [
+            "suppressedInSource"
+          ],
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///D:/Programovanie/MUNI/9.semester/DevOps/Exercise1/system-info-service-2-dotnet/src/SystemInfoService2DotNet/Models/ProcessDTO.cs",
+                "region": {
+                  "startLine": 142,
+                  "startColumn": 33,
+                  "endLine": 142,
+                  "endColumn": 35
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 4
+          }
+        },
+        {
+          "ruleId": "CS1591",
+          "level": "warning",
+          "message": "Missing XML comment for publicly visible type or member 'ProcessDTO.operator !=(ProcessDTO, ProcessDTO)'",
+          "suppressionStates": [
+            "suppressedInSource"
+          ],
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///D:/Programovanie/MUNI/9.semester/DevOps/Exercise1/system-info-service-2-dotnet/src/SystemInfoService2DotNet/Models/ProcessDTO.cs",
+                "region": {
+                  "startLine": 147,
+                  "startColumn": 33,
+                  "endLine": 147,
+                  "endColumn": 35
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 4
+          }
+        },
+        {
+          "ruleId": "CS1591",
+          "level": "warning",
+          "message": "Missing XML comment for publicly visible type or member 'SystemInfoDTO.operator ==(SystemInfoDTO, SystemInfoDTO)'",
+          "suppressionStates": [
+            "suppressedInSource"
+          ],
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///D:/Programovanie/MUNI/9.semester/DevOps/Exercise1/system-info-service-2-dotnet/src/SystemInfoService2DotNet/Models/SystemInfoDTO.cs",
+                "region": {
+                  "startLine": 142,
+                  "startColumn": 33,
+                  "endLine": 142,
+                  "endColumn": 35
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 4
+          }
+        },
+        {
+          "ruleId": "CS1591",
+          "level": "warning",
+          "message": "Missing XML comment for publicly visible type or member 'SystemInfoDTO.operator !=(SystemInfoDTO, SystemInfoDTO)'",
+          "suppressionStates": [
+            "suppressedInSource"
+          ],
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///D:/Programovanie/MUNI/9.semester/DevOps/Exercise1/system-info-service-2-dotnet/src/SystemInfoService2DotNet/Models/SystemInfoDTO.cs",
+                "region": {
+                  "startLine": 147,
+                  "startColumn": 33,
+                  "endLine": 147,
+                  "endColumn": 35
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 4
+          }
+        },
+        {
+          "ruleId": "CS1591",
+          "level": "warning",
+          "message": "Missing XML comment for publicly visible type or member 'ISystemInfoService'",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///D:/Programovanie/MUNI/9.semester/DevOps/Exercise1/system-info-service-2-dotnet/src/SystemInfoService2DotNet/Services/ISystemInfoService.cs",
+                "region": {
+                  "startLine": 5,
+                  "startColumn": 18,
+                  "endLine": 5,
+                  "endColumn": 36
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 4
+          }
+        },
+        {
+          "ruleId": "CS1591",
+          "level": "warning",
+          "message": "Missing XML comment for publicly visible type or member 'ISystemInfoService.GetIpAddress()'",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///D:/Programovanie/MUNI/9.semester/DevOps/Exercise1/system-info-service-2-dotnet/src/SystemInfoService2DotNet/Services/ISystemInfoService.cs",
+                "region": {
+                  "startLine": 7,
+                  "startColumn": 12,
+                  "endLine": 7,
+                  "endColumn": 24
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 4
+          }
+        },
+        {
+          "ruleId": "CS1591",
+          "level": "warning",
+          "message": "Missing XML comment for publicly visible type or member 'ISystemInfoService.GetRunningProcesses()'",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///D:/Programovanie/MUNI/9.semester/DevOps/Exercise1/system-info-service-2-dotnet/src/SystemInfoService2DotNet/Services/ISystemInfoService.cs",
+                "region": {
+                  "startLine": 9,
+                  "startColumn": 20,
+                  "endLine": 9,
+                  "endColumn": 39
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 4
+          }
+        },
+        {
+          "ruleId": "CS1591",
+          "level": "warning",
+          "message": "Missing XML comment for publicly visible type or member 'ISystemInfoService.GetDiskSpace()'",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///D:/Programovanie/MUNI/9.semester/DevOps/Exercise1/system-info-service-2-dotnet/src/SystemInfoService2DotNet/Services/ISystemInfoService.cs",
+                "region": {
+                  "startLine": 11,
+                  "startColumn": 10,
+                  "endLine": 11,
+                  "endColumn": 22
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 4
+          }
+        },
+        {
+          "ruleId": "CS1591",
+          "level": "warning",
+          "message": "Missing XML comment for publicly visible type or member 'ISystemInfoService.GetUptime()'",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///D:/Programovanie/MUNI/9.semester/DevOps/Exercise1/system-info-service-2-dotnet/src/SystemInfoService2DotNet/Services/ISystemInfoService.cs",
+                "region": {
+                  "startLine": 13,
+                  "startColumn": 12,
+                  "endLine": 13,
+                  "endColumn": 21
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 4
+          }
+        },
+        {
+          "ruleId": "CS1591",
+          "level": "warning",
+          "message": "Missing XML comment for publicly visible type or member 'SystemInfoService'",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///D:/Programovanie/MUNI/9.semester/DevOps/Exercise1/system-info-service-2-dotnet/src/SystemInfoService2DotNet/Services/SystemInfoService.cs",
+                "region": {
+                  "startLine": 11,
+                  "startColumn": 14,
+                  "endLine": 11,
+                  "endColumn": 31
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 4
+          }
+        },
+        {
+          "ruleId": "CS1591",
+          "level": "warning",
+          "message": "Missing XML comment for publicly visible type or member 'SystemInfoService.GetIpAddress()'",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///D:/Programovanie/MUNI/9.semester/DevOps/Exercise1/system-info-service-2-dotnet/src/SystemInfoService2DotNet/Services/SystemInfoService.cs",
+                "region": {
+                  "startLine": 13,
+                  "startColumn": 19,
+                  "endLine": 13,
+                  "endColumn": 31
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 4
+          }
+        },
+        {
+          "ruleId": "CS1591",
+          "level": "warning",
+          "message": "Missing XML comment for publicly visible type or member 'SystemInfoService.GetRunningProcesses()'",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///D:/Programovanie/MUNI/9.semester/DevOps/Exercise1/system-info-service-2-dotnet/src/SystemInfoService2DotNet/Services/SystemInfoService.cs",
+                "region": {
+                  "startLine": 20,
+                  "startColumn": 27,
+                  "endLine": 20,
+                  "endColumn": 46
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 4
+          }
+        },
+        {
+          "ruleId": "CS1591",
+          "level": "warning",
+          "message": "Missing XML comment for publicly visible type or member 'SystemInfoService.GetDiskSpace()'",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///D:/Programovanie/MUNI/9.semester/DevOps/Exercise1/system-info-service-2-dotnet/src/SystemInfoService2DotNet/Services/SystemInfoService.cs",
+                "region": {
+                  "startLine": 36,
+                  "startColumn": 17,
+                  "endLine": 36,
+                  "endColumn": 29
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 4
+          }
+        },
+        {
+          "ruleId": "CS1591",
+          "level": "warning",
+          "message": "Missing XML comment for publicly visible type or member 'SystemInfoService.GetUptime()'",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///D:/Programovanie/MUNI/9.semester/DevOps/Exercise1/system-info-service-2-dotnet/src/SystemInfoService2DotNet/Services/SystemInfoService.cs",
+                "region": {
+                  "startLine": 42,
+                  "startColumn": 19,
+                  "endLine": 42,
+                  "endColumn": 28
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 4
+          }
+        },
+        {
+          "ruleId": "IDE0160",
+          "level": "warning",
+          "message": "Convert to block scoped namespace",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///D:/Programovanie/MUNI/9.semester/DevOps/Exercise1/system-info-service-2-dotnet/src/SystemInfoService2DotNet/Services/ISystemInfoService.cs",
+                "region": {
+                  "startLine": 3,
+                  "startColumn": 1,
+                  "endLine": 3,
+                  "endColumn": 45
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///D:/Programovanie/MUNI/9.semester/DevOps/Exercise1/system-info-service-2-dotnet/src/SystemInfoService2DotNet/Services/ISystemInfoService.cs",
+                "region": {
+                  "startLine": 3,
+                  "startColumn": 1,
+                  "endLine": 14,
+                  "endColumn": 2
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "IDE0160",
+          "level": "warning",
+          "message": "Convert to block scoped namespace",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///D:/Programovanie/MUNI/9.semester/DevOps/Exercise1/system-info-service-2-dotnet/src/SystemInfoService2DotNet/Handlers/InternalExceptionHandler.cs",
+                "region": {
+                  "startLine": 10,
+                  "startColumn": 1,
+                  "endLine": 10,
+                  "endColumn": 45
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///D:/Programovanie/MUNI/9.semester/DevOps/Exercise1/system-info-service-2-dotnet/src/SystemInfoService2DotNet/Handlers/InternalExceptionHandler.cs",
+                "region": {
+                  "startLine": 10,
+                  "startColumn": 1,
+                  "endLine": 30,
+                  "endColumn": 2
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "IDE0160",
+          "level": "warning",
+          "message": "Convert to block scoped namespace",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///D:/Programovanie/MUNI/9.semester/DevOps/Exercise1/system-info-service-2-dotnet/src/SystemInfoService2DotNet/Models/ErrorDTO.cs",
+                "region": {
+                  "startLine": 6,
+                  "startColumn": 1,
+                  "endLine": 6,
+                  "endColumn": 43
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///D:/Programovanie/MUNI/9.semester/DevOps/Exercise1/system-info-service-2-dotnet/src/SystemInfoService2DotNet/Models/ErrorDTO.cs",
+                "region": {
+                  "startLine": 6,
+                  "startColumn": 1,
+                  "endLine": 104,
+                  "endColumn": 2
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "IDE0160",
+          "level": "warning",
+          "message": "Convert to block scoped namespace",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///D:/Programovanie/MUNI/9.semester/DevOps/Exercise1/system-info-service-2-dotnet/src/SystemInfoService2DotNet/Facades/ISystemInfoFacade.cs",
+                "region": {
+                  "startLine": 3,
+                  "startColumn": 1,
+                  "endLine": 3,
+                  "endColumn": 44
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///D:/Programovanie/MUNI/9.semester/DevOps/Exercise1/system-info-service-2-dotnet/src/SystemInfoService2DotNet/Facades/ISystemInfoFacade.cs",
+                "region": {
+                  "startLine": 3,
+                  "startColumn": 1,
+                  "endLine": 9,
+                  "endColumn": 2
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "IDE0160",
+          "level": "warning",
+          "message": "Convert to block scoped namespace",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///D:/Programovanie/MUNI/9.semester/DevOps/Exercise1/system-info-service-2-dotnet/src/SystemInfoService2DotNet/Controllers/SystemInfoApi.cs",
+                "region": {
+                  "startLine": 7,
+                  "startColumn": 1,
+                  "endLine": 7,
+                  "endColumn": 48
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///D:/Programovanie/MUNI/9.semester/DevOps/Exercise1/system-info-service-2-dotnet/src/SystemInfoService2DotNet/Controllers/SystemInfoApi.cs",
+                "region": {
+                  "startLine": 7,
+                  "startColumn": 1,
+                  "endLine": 44,
+                  "endColumn": 2
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "IDE0160",
+          "level": "warning",
+          "message": "Convert to block scoped namespace",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///D:/Programovanie/MUNI/9.semester/DevOps/Exercise1/system-info-service-2-dotnet/src/SystemInfoService2DotNet/Program.cs",
+                "region": {
+                  "startLine": 4,
+                  "startColumn": 1,
+                  "endLine": 4,
+                  "endColumn": 36
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///D:/Programovanie/MUNI/9.semester/DevOps/Exercise1/system-info-service-2-dotnet/src/SystemInfoService2DotNet/Program.cs",
+                "region": {
+                  "startLine": 4,
+                  "startColumn": 1,
+                  "endLine": 30,
+                  "endColumn": 2
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "IDE0160",
+          "level": "warning",
+          "message": "Convert to block scoped namespace",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///D:/Programovanie/MUNI/9.semester/DevOps/Exercise1/system-info-service-2-dotnet/src/SystemInfoService2DotNet/Facades/SystemInfoFacade.cs",
+                "region": {
+                  "startLine": 7,
+                  "startColumn": 1,
+                  "endLine": 7,
+                  "endColumn": 44
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///D:/Programovanie/MUNI/9.semester/DevOps/Exercise1/system-info-service-2-dotnet/src/SystemInfoService2DotNet/Facades/SystemInfoFacade.cs",
+                "region": {
+                  "startLine": 7,
+                  "startColumn": 1,
+                  "endLine": 34,
+                  "endColumn": 2
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "IDE0160",
+          "level": "warning",
+          "message": "Convert to block scoped namespace",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///D:/Programovanie/MUNI/9.semester/DevOps/Exercise1/system-info-service-2-dotnet/src/SystemInfoService2DotNet/Services/SystemInfoService.cs",
+                "region": {
+                  "startLine": 9,
+                  "startColumn": 1,
+                  "endLine": 9,
+                  "endColumn": 45
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///D:/Programovanie/MUNI/9.semester/DevOps/Exercise1/system-info-service-2-dotnet/src/SystemInfoService2DotNet/Services/SystemInfoService.cs",
+                "region": {
+                  "startLine": 9,
+                  "startColumn": 1,
+                  "endLine": 53,
+                  "endColumn": 2
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "IDE0160",
+          "level": "warning",
+          "message": "Convert to block scoped namespace",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///D:/Programovanie/MUNI/9.semester/DevOps/Exercise1/system-info-service-2-dotnet/src/SystemInfoService2DotNet/Models/ProcessDTO.cs",
+                "region": {
+                  "startLine": 6,
+                  "startColumn": 1,
+                  "endLine": 6,
+                  "endColumn": 43
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///D:/Programovanie/MUNI/9.semester/DevOps/Exercise1/system-info-service-2-dotnet/src/SystemInfoService2DotNet/Models/ProcessDTO.cs",
+                "region": {
+                  "startLine": 6,
+                  "startColumn": 1,
+                  "endLine": 155,
+                  "endColumn": 2
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "IDE0160",
+          "level": "warning",
+          "message": "Convert to block scoped namespace",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///D:/Programovanie/MUNI/9.semester/DevOps/Exercise1/system-info-service-2-dotnet/src/SystemInfoService2DotNet/Startup.cs",
+                "region": {
+                  "startLine": 15,
+                  "startColumn": 1,
+                  "endLine": 15,
+                  "endColumn": 36
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///D:/Programovanie/MUNI/9.semester/DevOps/Exercise1/system-info-service-2-dotnet/src/SystemInfoService2DotNet/Startup.cs",
+                "region": {
+                  "startLine": 15,
+                  "startColumn": 1,
+                  "endLine": 97,
+                  "endColumn": 2
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "IDE0160",
+          "level": "warning",
+          "message": "Convert to block scoped namespace",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///D:/Programovanie/MUNI/9.semester/DevOps/Exercise1/system-info-service-2-dotnet/src/SystemInfoService2DotNet/Models/SystemInfoDTO.cs",
+                "region": {
+                  "startLine": 8,
+                  "startColumn": 1,
+                  "endLine": 8,
+                  "endColumn": 43
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///D:/Programovanie/MUNI/9.semester/DevOps/Exercise1/system-info-service-2-dotnet/src/SystemInfoService2DotNet/Models/SystemInfoDTO.cs",
+                "region": {
+                  "startLine": 8,
+                  "startColumn": 1,
+                  "endLine": 155,
+                  "endColumn": 2
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CA1725",
+          "level": "warning",
+          "message": "In member ValueTask<bool> InternalExceptionHandler.TryHandleAsync(HttpContext context, Exception exception, CancellationToken cancellationToken), change parameter name context to httpContext in order to match the identifier as it has been declared in ValueTask<bool> IExceptionHandler.TryHandleAsync(HttpContext httpContext, Exception exception, CancellationToken cancellationToken)",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///D:/Programovanie/MUNI/9.semester/DevOps/Exercise1/system-info-service-2-dotnet/src/SystemInfoService2DotNet/Handlers/InternalExceptionHandler.cs",
+                "region": {
+                  "startLine": 18,
+                  "startColumn": 61,
+                  "endLine": 18,
+                  "endColumn": 68
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1,
+            "customProperties": {
+              "NewName": "httpContext"
+            }
+          }
+        },
+        {
+          "ruleId": "IDE0011",
+          "level": "warning",
+          "message": "Add braces to 'if' statement.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///D:/Programovanie/MUNI/9.semester/DevOps/Exercise1/system-info-service-2-dotnet/src/SystemInfoService2DotNet/Models/ProcessDTO.cs",
+                "region": {
+                  "startLine": 54,
+                  "startColumn": 9,
+                  "endLine": 54,
+                  "endColumn": 11
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "IDE0011",
+          "level": "warning",
+          "message": "Add braces to 'if' statement.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///D:/Programovanie/MUNI/9.semester/DevOps/Exercise1/system-info-service-2-dotnet/src/SystemInfoService2DotNet/Models/ProcessDTO.cs",
+                "region": {
+                  "startLine": 55,
+                  "startColumn": 9,
+                  "endLine": 55,
+                  "endColumn": 11
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "IDE0011",
+          "level": "warning",
+          "message": "Add braces to 'if' statement.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///D:/Programovanie/MUNI/9.semester/DevOps/Exercise1/system-info-service-2-dotnet/src/SystemInfoService2DotNet/Models/SystemInfoDTO.cs",
+                "region": {
+                  "startLine": 54,
+                  "startColumn": 9,
+                  "endLine": 54,
+                  "endColumn": 11
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "IDE0011",
+          "level": "warning",
+          "message": "Add braces to 'if' statement.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///D:/Programovanie/MUNI/9.semester/DevOps/Exercise1/system-info-service-2-dotnet/src/SystemInfoService2DotNet/Models/SystemInfoDTO.cs",
+                "region": {
+                  "startLine": 55,
+                  "startColumn": 9,
+                  "endLine": 55,
+                  "endColumn": 11
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "IDE0011",
+          "level": "warning",
+          "message": "Add braces to 'if' statement.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///D:/Programovanie/MUNI/9.semester/DevOps/Exercise1/system-info-service-2-dotnet/src/SystemInfoService2DotNet/Models/ErrorDTO.cs",
+                "region": {
+                  "startLine": 28,
+                  "startColumn": 9,
+                  "endLine": 28,
+                  "endColumn": 11
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "IDE0011",
+          "level": "warning",
+          "message": "Add braces to 'if' statement.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///D:/Programovanie/MUNI/9.semester/DevOps/Exercise1/system-info-service-2-dotnet/src/SystemInfoService2DotNet/Models/ErrorDTO.cs",
+                "region": {
+                  "startLine": 29,
+                  "startColumn": 9,
+                  "endLine": 29,
+                  "endColumn": 11
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CA1848",
+          "level": "warning",
+          "message": "For improved performance, use the LoggerMessage delegates instead of calling 'LoggerExtensions.LogError(ILogger, Exception?, string?, params object?[])'",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///D:/Programovanie/MUNI/9.semester/DevOps/Exercise1/system-info-service-2-dotnet/src/SystemInfoService2DotNet/Handlers/InternalExceptionHandler.cs",
+                "region": {
+                  "startLine": 21,
+                  "startColumn": 9,
+                  "endLine": 21,
+                  "endColumn": 57
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CA1309",
+          "level": "warning",
+          "message": "Use ordinal string comparison",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///D:/Programovanie/MUNI/9.semester/DevOps/Exercise1/system-info-service-2-dotnet/src/SystemInfoService2DotNet/Models/ProcessDTO.cs",
+                "region": {
+                  "startLine": 65,
+                  "startColumn": 23,
+                  "endLine": 65,
+                  "endColumn": 29
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CA1309",
+          "level": "warning",
+          "message": "Use ordinal string comparison",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///D:/Programovanie/MUNI/9.semester/DevOps/Exercise1/system-info-service-2-dotnet/src/SystemInfoService2DotNet/Models/ErrorDTO.cs",
+                "region": {
+                  "startLine": 34,
+                  "startColumn": 27,
+                  "endLine": 34,
+                  "endColumn": 33
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CA1309",
+          "level": "warning",
+          "message": "Use ordinal string comparison",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///D:/Programovanie/MUNI/9.semester/DevOps/Exercise1/system-info-service-2-dotnet/src/SystemInfoService2DotNet/Models/ProcessDTO.cs",
+                "region": {
+                  "startLine": 70,
+                  "startColumn": 23,
+                  "endLine": 70,
+                  "endColumn": 29
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CA1309",
+          "level": "warning",
+          "message": "Use ordinal string comparison",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///D:/Programovanie/MUNI/9.semester/DevOps/Exercise1/system-info-service-2-dotnet/src/SystemInfoService2DotNet/Models/ProcessDTO.cs",
+                "region": {
+                  "startLine": 75,
+                  "startColumn": 26,
+                  "endLine": 75,
+                  "endColumn": 32
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CA1309",
+          "level": "warning",
+          "message": "Use ordinal string comparison",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///D:/Programovanie/MUNI/9.semester/DevOps/Exercise1/system-info-service-2-dotnet/src/SystemInfoService2DotNet/Models/SystemInfoDTO.cs",
+                "region": {
+                  "startLine": 61,
+                  "startColumn": 28,
+                  "endLine": 61,
+                  "endColumn": 34
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "IDE0011",
+          "level": "warning",
+          "message": "Add braces to 'if' statement.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///D:/Programovanie/MUNI/9.semester/DevOps/Exercise1/system-info-service-2-dotnet/src/SystemInfoService2DotNet/Startup.cs",
+                "region": {
+                  "startLine": 80,
+                  "startColumn": 9,
+                  "endLine": 80,
+                  "endColumn": 11
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "IDE0011",
+          "level": "warning",
+          "message": "Add braces to 'else' statement.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///D:/Programovanie/MUNI/9.semester/DevOps/Exercise1/system-info-service-2-dotnet/src/SystemInfoService2DotNet/Startup.cs",
+                "region": {
+                  "startLine": 82,
+                  "startColumn": 9,
+                  "endLine": 82,
+                  "endColumn": 13
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "IDE0008",
+          "level": "warning",
+          "message": "Use explicit type instead of 'var'",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///D:/Programovanie/MUNI/9.semester/DevOps/Exercise1/system-info-service-2-dotnet/src/SystemInfoService2DotNet/Facades/SystemInfoFacade.cs",
+                "region": {
+                  "startLine": 17,
+                  "startColumn": 9,
+                  "endLine": 17,
+                  "endColumn": 12
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "IDE0008",
+          "level": "warning",
+          "message": "Use explicit type instead of 'var'",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///D:/Programovanie/MUNI/9.semester/DevOps/Exercise1/system-info-service-2-dotnet/src/SystemInfoService2DotNet/Services/SystemInfoService.cs",
+                "region": {
+                  "startLine": 22,
+                  "startColumn": 9,
+                  "endLine": 22,
+                  "endColumn": 12
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "IDE0008",
+          "level": "warning",
+          "message": "Use explicit type instead of 'var'",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///D:/Programovanie/MUNI/9.semester/DevOps/Exercise1/system-info-service-2-dotnet/src/SystemInfoService2DotNet/Services/SystemInfoService.cs",
+                "region": {
+                  "startLine": 38,
+                  "startColumn": 9,
+                  "endLine": 38,
+                  "endColumn": 12
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "IDE0008",
+          "level": "warning",
+          "message": "Use explicit type instead of 'var'",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///D:/Programovanie/MUNI/9.semester/DevOps/Exercise1/system-info-service-2-dotnet/src/SystemInfoService2DotNet/Models/ErrorDTO.cs",
+                "region": {
+                  "startLine": 43,
+                  "startColumn": 9,
+                  "endLine": 43,
+                  "endColumn": 12
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "IDE0011",
+          "level": "warning",
+          "message": "Add braces to 'if' statement.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///D:/Programovanie/MUNI/9.semester/DevOps/Exercise1/system-info-service-2-dotnet/src/SystemInfoService2DotNet/Models/ErrorDTO.cs",
+                "region": {
+                  "startLine": 66,
+                  "startColumn": 9,
+                  "endLine": 66,
+                  "endColumn": 11
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "IDE0011",
+          "level": "warning",
+          "message": "Add braces to 'if' statement.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///D:/Programovanie/MUNI/9.semester/DevOps/Exercise1/system-info-service-2-dotnet/src/SystemInfoService2DotNet/Models/SystemInfoDTO.cs",
+                "region": {
+                  "startLine": 111,
+                  "startColumn": 9,
+                  "endLine": 111,
+                  "endColumn": 11
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "IDE0011",
+          "level": "warning",
+          "message": "Add braces to 'if' statement.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///D:/Programovanie/MUNI/9.semester/DevOps/Exercise1/system-info-service-2-dotnet/src/SystemInfoService2DotNet/Models/ErrorDTO.cs",
+                "region": {
+                  "startLine": 67,
+                  "startColumn": 9,
+                  "endLine": 67,
+                  "endColumn": 11
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "IDE0011",
+          "level": "warning",
+          "message": "Add braces to 'if' statement.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///D:/Programovanie/MUNI/9.semester/DevOps/Exercise1/system-info-service-2-dotnet/src/SystemInfoService2DotNet/Models/SystemInfoDTO.cs",
+                "region": {
+                  "startLine": 112,
+                  "startColumn": 9,
+                  "endLine": 112,
+                  "endColumn": 11
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "IDE0008",
+          "level": "warning",
+          "message": "Use explicit type instead of 'var'",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///D:/Programovanie/MUNI/9.semester/DevOps/Exercise1/system-info-service-2-dotnet/src/SystemInfoService2DotNet/Services/SystemInfoService.cs",
+                "region": {
+                  "startLine": 44,
+                  "startColumn": 9,
+                  "endLine": 44,
+                  "endColumn": 12
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "IDE0008",
+          "level": "warning",
+          "message": "Use explicit type instead of 'var'",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///D:/Programovanie/MUNI/9.semester/DevOps/Exercise1/system-info-service-2-dotnet/src/SystemInfoService2DotNet/Models/SystemInfoDTO.cs",
+                "region": {
+                  "startLine": 85,
+                  "startColumn": 9,
+                  "endLine": 85,
+                  "endColumn": 12
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "IDE0008",
+          "level": "warning",
+          "message": "Use explicit type instead of 'var'",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///D:/Programovanie/MUNI/9.semester/DevOps/Exercise1/system-info-service-2-dotnet/src/SystemInfoService2DotNet/Models/ProcessDTO.cs",
+                "region": {
+                  "startLine": 85,
+                  "startColumn": 9,
+                  "endLine": 85,
+                  "endColumn": 12
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CA1834",
+          "level": "warning",
+          "message": "Use 'StringBuilder.Append(char)' instead of 'StringBuilder.Append(string)' when the input is a constant unit string",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///D:/Programovanie/MUNI/9.semester/DevOps/Exercise1/system-info-service-2-dotnet/src/SystemInfoService2DotNet/Models/ErrorDTO.cs",
+                "region": {
+                  "startLine": 45,
+                  "startColumn": 67,
+                  "endLine": 45,
+                  "endColumn": 71
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "IDE0008",
+          "level": "warning",
+          "message": "Use explicit type instead of 'var'",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///D:/Programovanie/MUNI/9.semester/DevOps/Exercise1/system-info-service-2-dotnet/src/SystemInfoService2DotNet/Services/SystemInfoService.cs",
+                "region": {
+                  "startLine": 49,
+                  "startColumn": 9,
+                  "endLine": 49,
+                  "endColumn": 12
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "IDE0008",
+          "level": "warning",
+          "message": "Use explicit type instead of 'var'",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///D:/Programovanie/MUNI/9.semester/DevOps/Exercise1/system-info-service-2-dotnet/src/SystemInfoService2DotNet/Facades/SystemInfoFacade.cs",
+                "region": {
+                  "startLine": 18,
+                  "startColumn": 9,
+                  "endLine": 18,
+                  "endColumn": 12
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "IDE0008",
+          "level": "warning",
+          "message": "Use explicit type instead of 'var'",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///D:/Programovanie/MUNI/9.semester/DevOps/Exercise1/system-info-service-2-dotnet/src/SystemInfoService2DotNet/Services/SystemInfoService.cs",
+                "region": {
+                  "startLine": 27,
+                  "startColumn": 9,
+                  "endLine": 27,
+                  "endColumn": 12
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "IDE0008",
+          "level": "warning",
+          "message": "Use explicit type instead of 'var'",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///D:/Programovanie/MUNI/9.semester/DevOps/Exercise1/system-info-service-2-dotnet/src/SystemInfoService2DotNet/Facades/SystemInfoFacade.cs",
+                "region": {
+                  "startLine": 20,
+                  "startColumn": 9,
+                  "endLine": 20,
+                  "endColumn": 12
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "IDE0008",
+          "level": "warning",
+          "message": "Use explicit type instead of 'var'",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///D:/Programovanie/MUNI/9.semester/DevOps/Exercise1/system-info-service-2-dotnet/src/SystemInfoService2DotNet/Facades/SystemInfoFacade.cs",
+                "region": {
+                  "startLine": 21,
+                  "startColumn": 9,
+                  "endLine": 21,
+                  "endColumn": 12
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CA1305",
+          "level": "warning",
+          "message": "The behavior of 'Convert.ToInt32(string)' could vary based on the current user's locale settings. Replace this call in 'SystemInfoFacade.GetSystemInfo()' with a call to 'Convert.ToInt32(string, IFormatProvider)'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///D:/Programovanie/MUNI/9.semester/DevOps/Exercise1/system-info-service-2-dotnet/src/SystemInfoService2DotNet/Facades/SystemInfoFacade.cs",
+                "region": {
+                  "startLine": 19,
+                  "startColumn": 41,
+                  "endLine": 19,
+                  "endColumn": 62
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CA1305",
+          "level": "warning",
+          "message": "The behavior of 'Convert.ToDouble(string)' could vary based on the current user's locale settings. Replace this call in 'SystemInfoService.GetUptime()' with a call to 'Convert.ToDouble(string, IFormatProvider)'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///D:/Programovanie/MUNI/9.semester/DevOps/Exercise1/system-info-service-2-dotnet/src/SystemInfoService2DotNet/Services/SystemInfoService.cs",
+                "region": {
+                  "startLine": 51,
+                  "startColumn": 16,
+                  "endLine": 51,
+                  "endColumn": 60
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CA1834",
+          "level": "warning",
+          "message": "Use 'StringBuilder.Append(char)' instead of 'StringBuilder.Append(string)' when the input is a constant unit string",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///D:/Programovanie/MUNI/9.semester/DevOps/Exercise1/system-info-service-2-dotnet/src/SystemInfoService2DotNet/Models/SystemInfoDTO.cs",
+                "region": {
+                  "startLine": 87,
+                  "startColumn": 61,
+                  "endLine": 87,
+                  "endColumn": 65
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CA1834",
+          "level": "warning",
+          "message": "Use 'StringBuilder.Append(char)' instead of 'StringBuilder.Append(string)' when the input is a constant unit string",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///D:/Programovanie/MUNI/9.semester/DevOps/Exercise1/system-info-service-2-dotnet/src/SystemInfoService2DotNet/Models/SystemInfoDTO.cs",
+                "region": {
+                  "startLine": 88,
+                  "startColumn": 61,
+                  "endLine": 88,
+                  "endColumn": 65
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CA1834",
+          "level": "warning",
+          "message": "Use 'StringBuilder.Append(char)' instead of 'StringBuilder.Append(string)' when the input is a constant unit string",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///D:/Programovanie/MUNI/9.semester/DevOps/Exercise1/system-info-service-2-dotnet/src/SystemInfoService2DotNet/Models/SystemInfoDTO.cs",
+                "region": {
+                  "startLine": 89,
+                  "startColumn": 61,
+                  "endLine": 89,
+                  "endColumn": 65
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CA1834",
+          "level": "warning",
+          "message": "Use 'StringBuilder.Append(char)' instead of 'StringBuilder.Append(string)' when the input is a constant unit string",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///D:/Programovanie/MUNI/9.semester/DevOps/Exercise1/system-info-service-2-dotnet/src/SystemInfoService2DotNet/Models/SystemInfoDTO.cs",
+                "region": {
+                  "startLine": 90,
+                  "startColumn": 67,
+                  "endLine": 90,
+                  "endColumn": 71
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CA1834",
+          "level": "warning",
+          "message": "Use 'StringBuilder.Append(char)' instead of 'StringBuilder.Append(string)' when the input is a constant unit string",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///D:/Programovanie/MUNI/9.semester/DevOps/Exercise1/system-info-service-2-dotnet/src/SystemInfoService2DotNet/Models/ProcessDTO.cs",
+                "region": {
+                  "startLine": 87,
+                  "startColumn": 49,
+                  "endLine": 87,
+                  "endColumn": 53
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CA1834",
+          "level": "warning",
+          "message": "Use 'StringBuilder.Append(char)' instead of 'StringBuilder.Append(string)' when the input is a constant unit string",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///D:/Programovanie/MUNI/9.semester/DevOps/Exercise1/system-info-service-2-dotnet/src/SystemInfoService2DotNet/Models/ProcessDTO.cs",
+                "region": {
+                  "startLine": 88,
+                  "startColumn": 51,
+                  "endLine": 88,
+                  "endColumn": 55
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CA1834",
+          "level": "warning",
+          "message": "Use 'StringBuilder.Append(char)' instead of 'StringBuilder.Append(string)' when the input is a constant unit string",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///D:/Programovanie/MUNI/9.semester/DevOps/Exercise1/system-info-service-2-dotnet/src/SystemInfoService2DotNet/Models/ProcessDTO.cs",
+                "region": {
+                  "startLine": 89,
+                  "startColumn": 51,
+                  "endLine": 89,
+                  "endColumn": 55
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CA1834",
+          "level": "warning",
+          "message": "Use 'StringBuilder.Append(char)' instead of 'StringBuilder.Append(string)' when the input is a constant unit string",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///D:/Programovanie/MUNI/9.semester/DevOps/Exercise1/system-info-service-2-dotnet/src/SystemInfoService2DotNet/Models/ProcessDTO.cs",
+                "region": {
+                  "startLine": 90,
+                  "startColumn": 57,
+                  "endLine": 90,
+                  "endColumn": 61
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "IDE0011",
+          "level": "warning",
+          "message": "Add braces to 'if' statement.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///D:/Programovanie/MUNI/9.semester/DevOps/Exercise1/system-info-service-2-dotnet/src/SystemInfoService2DotNet/Models/ProcessDTO.cs",
+                "region": {
+                  "startLine": 111,
+                  "startColumn": 9,
+                  "endLine": 111,
+                  "endColumn": 11
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "IDE0011",
+          "level": "warning",
+          "message": "Add braces to 'if' statement.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///D:/Programovanie/MUNI/9.semester/DevOps/Exercise1/system-info-service-2-dotnet/src/SystemInfoService2DotNet/Models/ProcessDTO.cs",
+                "region": {
+                  "startLine": 112,
+                  "startColumn": 9,
+                  "endLine": 112,
+                  "endColumn": 11
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "IDE0046",
+          "level": "warning",
+          "message": "'if' statement can be simplified",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///D:/Programovanie/MUNI/9.semester/DevOps/Exercise1/system-info-service-2-dotnet/src/SystemInfoService2DotNet/Models/SystemInfoDTO.cs",
+                "region": {
+                  "startLine": 55,
+                  "startColumn": 9,
+                  "endLine": 55,
+                  "endColumn": 11
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///D:/Programovanie/MUNI/9.semester/DevOps/Exercise1/system-info-service-2-dotnet/src/SystemInfoService2DotNet/Models/SystemInfoDTO.cs",
+                "region": {
+                  "startLine": 55,
+                  "startColumn": 9,
+                  "endLine": 55,
+                  "endColumn": 55
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "IDE0046",
+          "level": "warning",
+          "message": "'if' statement can be simplified",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///D:/Programovanie/MUNI/9.semester/DevOps/Exercise1/system-info-service-2-dotnet/src/SystemInfoService2DotNet/Models/ProcessDTO.cs",
+                "region": {
+                  "startLine": 55,
+                  "startColumn": 9,
+                  "endLine": 55,
+                  "endColumn": 11
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///D:/Programovanie/MUNI/9.semester/DevOps/Exercise1/system-info-service-2-dotnet/src/SystemInfoService2DotNet/Models/ProcessDTO.cs",
+                "region": {
+                  "startLine": 55,
+                  "startColumn": 9,
+                  "endLine": 55,
+                  "endColumn": 55
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "IDE0046",
+          "level": "warning",
+          "message": "'if' statement can be simplified",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///D:/Programovanie/MUNI/9.semester/DevOps/Exercise1/system-info-service-2-dotnet/src/SystemInfoService2DotNet/Models/SystemInfoDTO.cs",
+                "region": {
+                  "startLine": 112,
+                  "startColumn": 9,
+                  "endLine": 112,
+                  "endColumn": 11
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///D:/Programovanie/MUNI/9.semester/DevOps/Exercise1/system-info-service-2-dotnet/src/SystemInfoService2DotNet/Models/SystemInfoDTO.cs",
+                "region": {
+                  "startLine": 112,
+                  "startColumn": 9,
+                  "endLine": 112,
+                  "endColumn": 53
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "IDE0046",
+          "level": "warning",
+          "message": "'if' statement can be simplified",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///D:/Programovanie/MUNI/9.semester/DevOps/Exercise1/system-info-service-2-dotnet/src/SystemInfoService2DotNet/Models/ErrorDTO.cs",
+                "region": {
+                  "startLine": 29,
+                  "startColumn": 9,
+                  "endLine": 29,
+                  "endColumn": 11
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///D:/Programovanie/MUNI/9.semester/DevOps/Exercise1/system-info-service-2-dotnet/src/SystemInfoService2DotNet/Models/ErrorDTO.cs",
+                "region": {
+                  "startLine": 29,
+                  "startColumn": 9,
+                  "endLine": 29,
+                  "endColumn": 55
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "IDE0046",
+          "level": "warning",
+          "message": "'if' statement can be simplified",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///D:/Programovanie/MUNI/9.semester/DevOps/Exercise1/system-info-service-2-dotnet/src/SystemInfoService2DotNet/Models/ProcessDTO.cs",
+                "region": {
+                  "startLine": 112,
+                  "startColumn": 9,
+                  "endLine": 112,
+                  "endColumn": 11
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///D:/Programovanie/MUNI/9.semester/DevOps/Exercise1/system-info-service-2-dotnet/src/SystemInfoService2DotNet/Models/ProcessDTO.cs",
+                "region": {
+                  "startLine": 112,
+                  "startColumn": 9,
+                  "endLine": 112,
+                  "endColumn": 53
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "IDE0046",
+          "level": "warning",
+          "message": "'if' statement can be simplified",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///D:/Programovanie/MUNI/9.semester/DevOps/Exercise1/system-info-service-2-dotnet/src/SystemInfoService2DotNet/Models/ErrorDTO.cs",
+                "region": {
+                  "startLine": 67,
+                  "startColumn": 9,
+                  "endLine": 67,
+                  "endColumn": 11
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///D:/Programovanie/MUNI/9.semester/DevOps/Exercise1/system-info-service-2-dotnet/src/SystemInfoService2DotNet/Models/ErrorDTO.cs",
+                "region": {
+                  "startLine": 67,
+                  "startColumn": 9,
+                  "endLine": 67,
+                  "endColumn": 53
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "IDE0011",
+          "level": "warning",
+          "message": "Add braces to 'if' statement.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///D:/Programovanie/MUNI/9.semester/DevOps/Exercise1/system-info-service-2-dotnet/src/SystemInfoService2DotNet/Models/ProcessDTO.cs",
+                "region": {
+                  "startLine": 128,
+                  "startColumn": 13,
+                  "endLine": 128,
+                  "endColumn": 15
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "IDE0011",
+          "level": "warning",
+          "message": "Add braces to 'if' statement.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///D:/Programovanie/MUNI/9.semester/DevOps/Exercise1/system-info-service-2-dotnet/src/SystemInfoService2DotNet/Models/ProcessDTO.cs",
+                "region": {
+                  "startLine": 130,
+                  "startColumn": 13,
+                  "endLine": 130,
+                  "endColumn": 15
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "IDE0011",
+          "level": "warning",
+          "message": "Add braces to 'if' statement.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///D:/Programovanie/MUNI/9.semester/DevOps/Exercise1/system-info-service-2-dotnet/src/SystemInfoService2DotNet/Models/ProcessDTO.cs",
+                "region": {
+                  "startLine": 132,
+                  "startColumn": 13,
+                  "endLine": 132,
+                  "endColumn": 15
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "IDE0011",
+          "level": "warning",
+          "message": "Add braces to 'if' statement.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///D:/Programovanie/MUNI/9.semester/DevOps/Exercise1/system-info-service-2-dotnet/src/SystemInfoService2DotNet/Models/SystemInfoDTO.cs",
+                "region": {
+                  "startLine": 126,
+                  "startColumn": 13,
+                  "endLine": 126,
+                  "endColumn": 15
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "IDE0011",
+          "level": "warning",
+          "message": "Add braces to 'if' statement.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///D:/Programovanie/MUNI/9.semester/DevOps/Exercise1/system-info-service-2-dotnet/src/SystemInfoService2DotNet/Models/SystemInfoDTO.cs",
+                "region": {
+                  "startLine": 128,
+                  "startColumn": 13,
+                  "endLine": 128,
+                  "endColumn": 15
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "IDE0008",
+          "level": "warning",
+          "message": "Use explicit type instead of 'var'",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///D:/Programovanie/MUNI/9.semester/DevOps/Exercise1/system-info-service-2-dotnet/src/SystemInfoService2DotNet/Models/ProcessDTO.cs",
+                "region": {
+                  "startLine": 124,
+                  "startColumn": 13,
+                  "endLine": 124,
+                  "endColumn": 16
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "IDE0008",
+          "level": "warning",
+          "message": "Use explicit type instead of 'var'",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///D:/Programovanie/MUNI/9.semester/DevOps/Exercise1/system-info-service-2-dotnet/src/SystemInfoService2DotNet/Models/SystemInfoDTO.cs",
+                "region": {
+                  "startLine": 124,
+                  "startColumn": 13,
+                  "endLine": 124,
+                  "endColumn": 16
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "IDE0011",
+          "level": "warning",
+          "message": "Add braces to 'if' statement.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///D:/Programovanie/MUNI/9.semester/DevOps/Exercise1/system-info-service-2-dotnet/src/SystemInfoService2DotNet/Models/ErrorDTO.cs",
+                "region": {
+                  "startLine": 81,
+                  "startColumn": 13,
+                  "endLine": 81,
+                  "endColumn": 15
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "IDE0008",
+          "level": "warning",
+          "message": "Use explicit type instead of 'var'",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///D:/Programovanie/MUNI/9.semester/DevOps/Exercise1/system-info-service-2-dotnet/src/SystemInfoService2DotNet/Models/ErrorDTO.cs",
+                "region": {
+                  "startLine": 79,
+                  "startColumn": 13,
+                  "endLine": 79,
+                  "endColumn": 16
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        }
+      ],
+      "rules": {
+        "CA1305": {
+          "id": "CA1305",
+          "shortDescription": "Specify IFormatProvider",
+          "fullDescription": "A method or constructor calls one or more members that have overloads that accept a System.IFormatProvider parameter, and the method or constructor does not call the overload that takes the IFormatProvider parameter. When a System.Globalization.CultureInfo or IFormatProvider object is not supplied, the default value that is supplied by the overloaded member might not have the effect that you want in all locales. If the result will be based on the input from/output displayed to the user, specify 'CultureInfo.CurrentCulture' as the 'IFormatProvider'. Otherwise, if the result will be stored and accessed by software, such as when it is loaded from disk/database and when it is persisted to disk/database, specify 'CultureInfo.InvariantCulture'.",
+          "defaultLevel": "note",
+          "helpUri": "https://learn.microsoft.com/dotnet/fundamentals/code-analysis/quality-rules/ca1305",
+          "properties": {
+            "category": "Globalization",
+            "isEnabledByDefault": true,
+            "tags": [
+              "PortedFromFxCop",
+              "Telemetry",
+              "EnabledRuleInAggressiveMode"
+            ]
+          }
+        },
+        "CA1309": {
+          "id": "CA1309",
+          "shortDescription": "Use ordinal string comparison",
+          "fullDescription": "A string comparison operation that is nonlinguistic does not set the StringComparison parameter to either Ordinal or OrdinalIgnoreCase. By explicitly setting the parameter to either StringComparison.Ordinal or StringComparison.OrdinalIgnoreCase, your code often gains speed, becomes more correct, and becomes more reliable.",
+          "defaultLevel": "note",
+          "helpUri": "https://learn.microsoft.com/dotnet/fundamentals/code-analysis/quality-rules/ca1309",
+          "properties": {
+            "category": "Globalization",
+            "isEnabledByDefault": true,
+            "tags": [
+              "PortedFromFxCop",
+              "Telemetry",
+              "EnabledRuleInAggressiveMode"
+            ]
+          }
+        },
+        "CA1725": {
+          "id": "CA1725",
+          "shortDescription": "Parameter names should match base declaration",
+          "fullDescription": "Consistent naming of parameters in an override hierarchy increases the usability of the method overrides. A parameter name in a derived method that differs from the name in the base declaration can cause confusion about whether the method is an override of the base method or a new overload of the method.",
+          "defaultLevel": "note",
+          "helpUri": "https://learn.microsoft.com/dotnet/fundamentals/code-analysis/quality-rules/ca1725",
+          "properties": {
+            "category": "Naming",
+            "isEnabledByDefault": true,
+            "tags": [
+              "PortedFromFxCop",
+              "Telemetry",
+              "EnabledRuleInAggressiveMode"
+            ]
+          }
+        },
+        "CA1834": {
+          "id": "CA1834",
+          "shortDescription": "Consider using 'StringBuilder.Append(char)' when applicable",
+          "fullDescription": "'StringBuilder.Append(char)' is more efficient than 'StringBuilder.Append(string)' when the string is a single character. When calling 'Append' with a constant, prefer using a constant char rather than a constant string containing one character.",
+          "defaultLevel": "note",
+          "helpUri": "https://learn.microsoft.com/dotnet/fundamentals/code-analysis/quality-rules/ca1834",
+          "properties": {
+            "category": "Performance",
+            "isEnabledByDefault": true,
+            "tags": [
+              "Telemetry",
+              "EnabledRuleInAggressiveMode"
+            ]
+          }
+        },
+        "CA1848": {
+          "id": "CA1848",
+          "shortDescription": "Use the LoggerMessage delegates",
+          "fullDescription": "For improved performance, use the LoggerMessage delegates.",
+          "defaultLevel": "note",
+          "helpUri": "https://learn.microsoft.com/dotnet/fundamentals/code-analysis/quality-rules/ca1848",
+          "properties": {
+            "category": "Performance",
+            "isEnabledByDefault": true,
+            "tags": [
+              "Telemetry",
+              "EnabledRuleInAggressiveMode"
+            ]
+          }
+        },
+        "CS1591": {
+          "id": "CS1591",
+          "shortDescription": "Missing XML comment for publicly visible type or member",
+          "fullDescription": "The /doc compiler option was specified, but one or more constructs did not have comments.",
+          "defaultLevel": "warning",
+          "helpUri": "https://msdn.microsoft.com/query/roslyn.query?appId=roslyn&k=k(CS1591)",
+          "properties": {
+            "category": "Compiler",
+            "isEnabledByDefault": true,
+            "tags": [
+              "Compiler",
+              "Telemetry"
+            ]
+          }
+        },
+        "IDE0008": {
+          "id": "IDE0008",
+          "shortDescription": "Use explicit type",
+          "defaultLevel": "note",
+          "helpUri": "https://learn.microsoft.com/dotnet/fundamentals/code-analysis/style-rules/ide0008",
+          "properties": {
+            "category": "Style",
+            "isEnabledByDefault": true,
+            "tags": [
+              "Telemetry",
+              "EnforceOnBuild_HighlyRecommended"
+            ]
+          }
+        },
+        "IDE0011": {
+          "id": "IDE0011",
+          "shortDescription": "Add braces",
+          "defaultLevel": "note",
+          "helpUri": "https://learn.microsoft.com/dotnet/fundamentals/code-analysis/style-rules/ide0011",
+          "properties": {
+            "category": "Style",
+            "isEnabledByDefault": true,
+            "tags": [
+              "Telemetry",
+              "EnforceOnBuild_HighlyRecommended"
+            ]
+          }
+        },
+        "IDE0046": {
+          "id": "IDE0046",
+          "shortDescription": "Convert to conditional expression",
+          "defaultLevel": "note",
+          "helpUri": "https://learn.microsoft.com/dotnet/fundamentals/code-analysis/style-rules/ide0046",
+          "properties": {
+            "category": "Style",
+            "isEnabledByDefault": true,
+            "tags": [
+              "Telemetry",
+              "EnforceOnBuild_Recommended"
+            ]
+          }
+        },
+        "IDE0160": {
+          "id": "IDE0160",
+          "shortDescription": "Convert to block scoped namespace",
+          "defaultLevel": "note",
+          "helpUri": "https://learn.microsoft.com/dotnet/fundamentals/code-analysis/style-rules/ide0160",
+          "properties": {
+            "category": "Style",
+            "isEnabledByDefault": true,
+            "tags": [
+              "Telemetry",
+              "EnforceOnBuild_HighlyRecommended"
+            ]
+          }
+        }
+      }
+    }
+  ]
+}

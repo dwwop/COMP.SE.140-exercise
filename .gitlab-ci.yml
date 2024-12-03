@@ -19,7 +19,7 @@ build:
       - ./
     expire_in: 1 hour
     
-static-analysis:
+static-analysis-java:
   stage: static-analysis
   tags:
     - project
@@ -35,6 +35,32 @@ static-analysis:
       codequality:
         - system-info-service-1-java/target/gl-code-quality-report.json
     expire_in: 1 hour
+
+static-analysis-dotnet:
+  stage: static-analysis
+  tags:
+    - project
+  image: 
+    mcr.microsoft.com/dotnet/sdk:8.0
+  script:
+    - cd system-info-service-2-dotnet/src/SystemInfoService2DotNet
+    - dotnet tool restore
+    - dotnet build
+    - dotnet tool run roslynator analyze -o ./roslynator.xml --severity-level hidden || true
+    - ls -la
+    - dotnet tool run cq roslynator roslynator.xml gl-code-quality-report1.json %DIR
+    - dotnet tool run cq sarif codeanalysis.sarif.json gl-code-quality-report2.json %DIR
+    - dotnet tool run cq merge gl-code-quality-report.json gl-code-quality-report1.json  gl-code-quality-report2.json
+  artifacts:
+    paths:
+      - system-info-service-2-dotnet/src/SystemInfoService2DotNet/roslynator.xml
+      - system-info-service-2-dotnet/src/SystemInfoService2DotNet/gl-code-quality-report.json
+    name: "static-analysis-results"
+    reports:
+      codequality: system-info-service-2-dotnet/src/SystemInfoService2DotNet/gl-code-quality-report.json
+    expire_in: 1 hour
+  needs:
+    - static-analysis-java
 
 deploy:
   stage: deploy
