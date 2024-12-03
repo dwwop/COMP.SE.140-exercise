@@ -1,0 +1,18 @@
+stages:
+  - build
+
+variables:
+  DOCKER_COMPOSE_COMMAND: docker compose -f docker-compose.yml
+  TAG: $CI_PROJECT_PATH:$CI_COMMIT_REF_SLUG
+
+build:
+  stage: build
+  tags:
+    - project
+  script:
+    - $DOCKER_COMPOSE_COMMAND build
+  artifacts:
+    name: "build-artifacts"
+    paths:
+      - ./
+    expire_in: 1 hour
