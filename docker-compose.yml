@@ -25,6 +25,7 @@ services:
       context: ./nginx
     ports:
       - "8198:80"
+      - "8197:81"
     networks:
       - exercise
     depends_on:
