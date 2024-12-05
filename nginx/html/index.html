@@ -93,7 +93,16 @@
                 });
         }
 
+        function serviceStartTime() {
+            fetch('/service-start-time')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('startTime').textContent = data;
+                });
+        }
+
         setInterval(updateRequestCounts, 1000);
+        serviceStartTime();
     </script>
 </head>
 
@@ -107,6 +116,7 @@
     <div class="stats">
         <p>Browser Requests: <span id="browserCount">0</span></p>
         <p>API Requests: <span id="apiCount">0</span></p>
+        <p>Service start time: <span id="startTime">0</span></p>
     </div>
 </body>
 
