@@ -28,4 +28,9 @@ public class StateFacadeImpl implements StateFacade {
     public void setStateRunning() {
         service.setStateRunning();
     }
+
+    @Override
+    public String getRunLog() {
+        return String.join("\n", service.getRunLog());
+    }
 }

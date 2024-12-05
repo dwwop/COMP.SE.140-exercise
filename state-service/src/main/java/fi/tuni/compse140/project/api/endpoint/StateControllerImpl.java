@@ -29,4 +29,9 @@ public class StateControllerImpl implements StateController {
         facade.setStateRunning();
         return ResponseEntity.noContent().build();
     }
+
+    @Override
+    public ResponseEntity<String> getRunLog() {
+        return ResponseEntity.ok(facade.getRunLog());
+    }
 }

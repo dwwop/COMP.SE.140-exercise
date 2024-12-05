@@ -21,6 +21,7 @@ public interface StateController {
     String GET_STATE = "Returns system state";
     String PUT_STATE = "Updates system state, if the state transition is valid";
     String POST_STATE_RUNNING = "Sets state from INIT to RUNNING";
+    String GET_RUN_LOG = "Returns state transitions run log";
 
     @GetMapping("state")
     @Operation(summary = GET_STATE)
@@ -70,4 +71,18 @@ public interface StateController {
                     content = @Content(schema = @Schema(implementation = ErrorDTO.class))),
     })
     ResponseEntity<Void> postStateRunning();
+
+    @GetMapping("run-log")
+    @Operation(summary = GET_RUN_LOG)
+    @ApiResponses({
+            @ApiResponse(
+                    responseCode = OK,
+                    content = @Content(mediaType = MediaType.TEXT_PLAIN_VALUE)
+            ),
+            @ApiResponse(
+                    responseCode = SERVER_ERROR,
+                    description = SERVER_ERROR_DESCRIPTION,
+                    content = @Content(schema = @Schema(implementation = ErrorDTO.class))),
+    })
+    ResponseEntity<String> getRunLog();
 }

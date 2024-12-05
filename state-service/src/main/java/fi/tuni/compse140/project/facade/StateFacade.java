@@ -8,4 +8,6 @@ public interface StateFacade {
     void setState(State state);
 
     void setStateRunning();
+
+    String getRunLog();
 }

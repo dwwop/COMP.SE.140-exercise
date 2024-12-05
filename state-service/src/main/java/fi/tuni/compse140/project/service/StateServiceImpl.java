@@ -4,9 +4,8 @@ import fi.tuni.compse140.project.exception.InvalidTransitionException;
 import fi.tuni.compse140.project.model.State;
 import org.springframework.stereotype.Service;
 
-import java.util.Map;
-import java.util.Objects;
-import java.util.Set;
+import java.time.Instant;
+import java.util.*;
 
 @Service
 public class StateServiceImpl implements StateService {
@@ -17,6 +16,7 @@ public class StateServiceImpl implements StateService {
             State.SHUTDOWN, Set.of()
     );
     private static State state = State.INIT;
+    private static final List<String> runLog = new ArrayList<>();
 
     @Override
     public State getState() {
@@ -26,18 +26,29 @@ public class StateServiceImpl implements StateService {
     @Override
     public void setState(State state) {
         if (validTransitions.get(StateServiceImpl.state).contains(state)) {
+            addToRunLog(StateServiceImpl.state, state);
             StateServiceImpl.state = state;
         } else if (!Objects.equals(StateServiceImpl.state, state)) {
             throw new InvalidTransitionException(StateServiceImpl.state, state);
         }
     }
 
+    private void addToRunLog(State from, State to) {
+        runLog.add(String.format("%s: %s->%s", Instant.now(), from, to));
+    }
+
     @Override
     public void setStateRunning() {
         if (State.INIT.equals(StateServiceImpl.state)) {
+            addToRunLog(State.INIT, State.RUNNING);
             StateServiceImpl.state = State.RUNNING;
         } else {
             throw new InvalidTransitionException(StateServiceImpl.state, State.RUNNING);
         }
+    }
+
+    @Override
+    public List<String> getRunLog() {
+        return runLog;
     }
 }
