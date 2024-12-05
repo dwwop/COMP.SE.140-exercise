@@ -4,7 +4,6 @@
 <head>
     <meta charset="UTF-8">
     <style>
-        /* styles.css */
         body {
             font-family: Arial, sans-serif;
             display: flex;
@@ -53,6 +52,15 @@
         button {
             display: inline-block;
         }
+
+        .stats {
+            margin-top: 20px;
+            font-size: 16px;
+        }
+
+        .stats span {
+            font-weight: bold;
+        }
     </style>
 
     <script>
@@ -60,11 +68,32 @@
             document.getElementById('responseText').value = "";
             fetch('/service1')
                 .then(response => response.text())
-                .then(data => { if (data) { document.getElementById('responseText').value = JSON.stringify(JSON.parse(data), undefined, 4) } });
+                .then(data => {
+                    if (data) {
+                        document.getElementById('responseText').value = JSON.stringify(JSON.parse(data), undefined, 4);
+                    }
+                });
         }
+
         function stopSystem() {
             fetch('/shutdown', { method: 'POST' });
         }
+
+        function updateRequestCounts() {
+            fetch('/request-count/browser')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('browserCount').textContent = data;
+                });
+
+            fetch('/request-count/api')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('apiCount').textContent = data;
+                });
+        }
+
+        setInterval(updateRequestCounts, 1000);
     </script>
 </head>
 
@@ -73,7 +102,12 @@
         <button onclick="sendRequest()">REQUEST</button>
         <button onclick="stopSystem()">STOP</button>
     </div>
-    <textarea id="responseText" cols=50 rows=10 disabled class="language-json"></textarea>
+    <textarea id="responseText" cols="50" rows="10" disabled class="language-json"></textarea>
+
+    <div class="stats">
+        <p>Browser Requests: <span id="browserCount">0</span></p>
+        <p>API Requests: <span id="apiCount">0</span></p>
+    </div>
 </body>
 
 </html>
