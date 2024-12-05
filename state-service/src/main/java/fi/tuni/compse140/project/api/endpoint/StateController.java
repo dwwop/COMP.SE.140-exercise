@@ -20,7 +20,7 @@ import static fi.tuni.compse140.project.constants.HTTPConstants.*;
 public interface StateController {
     String GET_STATE = "Returns system state";
 
-    @GetMapping
+    @GetMapping("state")
     @Operation(summary = GET_STATE)
     @ApiResponses({
             @ApiResponse(
