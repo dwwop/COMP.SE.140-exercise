@@ -57,3 +57,13 @@ def test_put_state():
     
     response = requests.put(f"{BASE_URL}/state", json={'state': 'INVALID'})
     assert response.status_code == 400, f"Unexpected status code: {response.status_code}"
+
+@pytest.mark.run(order=2)
+def test_get_log():
+    response = requests.get(f"{BASE_URL}/run-log")
+    assert response.status_code == 200, f"Unexpected status code: {response.status_code}"
+    assert 'text/plain' in response.headers['Content-Type'], "Expected Content-Type is text/plain"
+
+    response_data = response.text
+    assert "INIT->RUNNING" in response_data
+    assert "RUNNING->PAUSED" in response_data
