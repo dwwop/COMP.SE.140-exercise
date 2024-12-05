@@ -45,12 +45,14 @@ def test_put_state():
     assert response.status_code == 204, f"Unexpected status code: {response.status_code}"
 
     response = requests.get(f"{BASE_URL}/state")
+    response_data = response.text
     assert "RUNNING" == response_data, f"Unexpected response body: {response_data}"
 
     response = requests.put(f"{BASE_URL}/state", json={'state': 'PAUSED'})
     assert response.status_code == 204, f"Unexpected status code: {response.status_code}"
 
     response = requests.get(f"{BASE_URL}/state")
+    response_data = response.text
     assert "PAUSED" == response_data, f"Unexpected response body: {response_data}"
     
     response = requests.put(f"{BASE_URL}/state", json={'state': 'INVALID'})
