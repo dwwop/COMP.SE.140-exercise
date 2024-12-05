@@ -56,4 +56,9 @@ public class StateControllerImpl implements StateController {
         facade.updateRequestCountBrowser();
         return ResponseEntity.noContent().build();
     }
+    @Override
+    public ResponseEntity<Void> shutdown() {
+        facade.shutdown();
+        return ResponseEntity.noContent().build();
+    }
 }

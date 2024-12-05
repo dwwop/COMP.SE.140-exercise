@@ -26,6 +26,7 @@ public interface StateController {
     String PUT_REQUEST_COUNT_API = "Update the number of requests through the API by one";
     String GET_REQUEST_COUNT_BROWSER = "Returns the number of requests through the browser";
     String PUT_REQUEST_COUNT_BROWSER = "Update the number of requests through the browser by one";
+    String SHUTDOWN = "Shutdowns service 2s after receiving request";
 
     @GetMapping("state")
     @Operation(summary = GET_STATE)
@@ -144,4 +145,17 @@ public interface StateController {
                     content = @Content(schema = @Schema(implementation = ErrorDTO.class))),
     })
     ResponseEntity<Void> putRequestCountBrowser();
+
+
+    @PostMapping("shutdown")
+    @Operation(summary = SHUTDOWN)
+    @ApiResponses({
+            @ApiResponse(
+                    responseCode = NO_CONTENT
+            ),
+            @ApiResponse(responseCode = SERVER_ERROR,
+                    description = SERVER_ERROR_DESCRIPTION,
+                    content = @Content(schema = @Schema(implementation = ErrorDTO.class))),
+    })
+    ResponseEntity<Void> shutdown();
 }

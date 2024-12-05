@@ -23,6 +23,8 @@ services:
   state-service:
     build:
       context: ./state-service
+    environment:
+      - NGINX_HOST=nginx:81
     restart: on-failure
     networks:
       - exercise

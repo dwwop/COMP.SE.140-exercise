@@ -144,6 +144,21 @@ paths:
             '*/*':
               schema:
                 $ref: '#/components/schemas/ErrorDTO'
+  /shutdown:
+    post:
+      tags:
+      - State
+      summary: Shutdowns service 2s after receiving request
+      operationId: shutdown
+      responses:
+        "204":
+          description: No Content
+        "500":
+          description: Unexpected server error
+          content:
+            '*/*':
+              schema:
+                $ref: '#/components/schemas/ErrorDTO'
   /run-log:
     get:
       tags:

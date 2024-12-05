@@ -18,4 +18,6 @@ public interface StateFacade {
     void updateRequestCountAPI();
 
     void updateRequestCountBrowser();
+
+    void shutdown();
 }

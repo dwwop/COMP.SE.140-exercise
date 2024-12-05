@@ -2,6 +2,7 @@ package fi.tuni.compse140.project.service;
 
 import fi.tuni.compse140.project.exception.InvalidTransitionException;
 import fi.tuni.compse140.project.model.State;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.time.Instant;
@@ -19,6 +20,12 @@ public class StateServiceImpl implements StateService {
     private static final List<String> runLog = new ArrayList<>();
     private static int requestCountApi = 0;
     private static  int requestCountBrowser = 0;
+    private NginxGateway nginxGateway;
+
+    @Autowired
+    public StateServiceImpl(NginxGateway nginxGateway) {
+        this.nginxGateway = nginxGateway;
+    }
 
     @Override
     public State getState() {
@@ -32,6 +39,10 @@ public class StateServiceImpl implements StateService {
             StateServiceImpl.state = state;
         } else if (!Objects.equals(StateServiceImpl.state, state)) {
             throw new InvalidTransitionException(StateServiceImpl.state, state);
+        }
+
+        if (State.SHUTDOWN.equals(StateServiceImpl.state)) {
+            nginxGateway.shutdown();
         }
     }
 
