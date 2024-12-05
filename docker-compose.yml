@@ -20,6 +20,13 @@ services:
     networks:
       - exercise
 
+  state-service:
+    build:
+      context: ./state-service
+    restart: on-failure
+    networks:
+      - exercise
+
   nginx:
     build:
       context: ./nginx
