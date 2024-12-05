@@ -17,6 +17,8 @@ public class StateServiceImpl implements StateService {
     );
     private static State state = State.INIT;
     private static final List<String> runLog = new ArrayList<>();
+    private static int requestCountApi = 0;
+    private static  int requestCountBrowser = 0;
 
     @Override
     public State getState() {
@@ -50,5 +52,25 @@ public class StateServiceImpl implements StateService {
     @Override
     public List<String> getRunLog() {
         return runLog;
+    }
+
+    @Override
+    public int getRequestCountAPI() {
+        return requestCountApi;
+    }
+
+    @Override
+    public int getRequestCountBrowser() {
+        return requestCountBrowser;
+    }
+
+    @Override
+    public void updateRequestCountAPI() {
+        requestCountApi += 1;
+    }
+
+    @Override
+    public void updateRequestCountBrowser() {
+        requestCountBrowser += 1;
     }
 }

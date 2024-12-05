@@ -33,4 +33,24 @@ public class StateFacadeImpl implements StateFacade {
     public String getRunLog() {
         return String.join("\n", service.getRunLog());
     }
+
+    @Override
+    public String getRequestCountAPI() {
+        return String.valueOf(service.getRequestCountAPI());
+    }
+
+    @Override
+    public String getRequestCountBrowser() {
+        return String.valueOf(service.getRequestCountBrowser());
+    }
+
+    @Override
+    public void updateRequestCountAPI() {
+        service.updateRequestCountAPI();
+    }
+
+    @Override
+    public void updateRequestCountBrowser() {
+        service.updateRequestCountBrowser();
+    }
 }

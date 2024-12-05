@@ -34,4 +34,26 @@ public class StateControllerImpl implements StateController {
     public ResponseEntity<String> getRunLog() {
         return ResponseEntity.ok(facade.getRunLog());
     }
+
+    @Override
+    public ResponseEntity<String> getRequestCountApi() {
+        return ResponseEntity.ok(facade.getRequestCountAPI());
+    }
+
+    @Override
+    public ResponseEntity<String> getRequestCountBrowser() {
+        return ResponseEntity.ok(facade.getRequestCountBrowser());
+    }
+
+    @Override
+    public ResponseEntity<Void> putRequestCountApi() {
+        facade.updateRequestCountAPI();
+        return ResponseEntity.noContent().build();
+    }
+
+    @Override
+    public ResponseEntity<Void> putRequestCountBrowser() {
+        facade.updateRequestCountBrowser();
+        return ResponseEntity.noContent().build();
+    }
 }

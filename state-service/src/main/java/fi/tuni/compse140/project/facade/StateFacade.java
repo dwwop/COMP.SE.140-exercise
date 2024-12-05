@@ -10,4 +10,12 @@ public interface StateFacade {
     void setStateRunning();
 
     String getRunLog();
+
+    String getRequestCountAPI();
+
+    String getRequestCountBrowser();
+
+    void updateRequestCountAPI();
+
+    void updateRequestCountBrowser();
 }

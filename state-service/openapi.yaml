@@ -11,40 +11,169 @@ info:
     url: https://www.apache.org/licenses/LICENSE-2.0.html
   version: "1.0"
 servers:
-  - url: "{scheme}://{server}:{port}"
-    variables:
-      scheme:
-        default: http
-        enum:
-          - http
-          - https
-      server:
-        default: localhost
-      port:
-        default: "8080"
+- url: "{scheme}://{server}:{port}"
+  variables:
+    scheme:
+      default: http
+      enum:
+      - http
+      - https
+    server:
+      default: localhost
+    port:
+      default: "8080"
 tags:
-  - name: State
-    description: Controller for state information
+- name: State
+  description: Controller for state information
 paths:
-  /:
+  /state:
     get:
       tags:
-        - State
+      - State
       summary: Returns system state
       operationId: getState
       responses:
-        "200":
-          description: OK
-          content:
-            text/plain: { }
         "500":
           description: Unexpected server error
           content:
             '*/*':
               schema:
                 $ref: '#/components/schemas/ErrorDTO'
+        "200":
+          description: OK
+          content:
+            text/plain: {}
+    put:
+      tags:
+      - State
+      summary: "Updates system state, if the state transition is valid"
+      operationId: putState
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/StateDTO'
+        required: true
+      responses:
+        "204":
+          description: No Content
+        "409":
+          description: The transition cannot be executed
+        "500":
+          description: Unexpected server error
+          content:
+            '*/*':
+              schema:
+                $ref: '#/components/schemas/ErrorDTO'
+  /request-count/browser:
+    get:
+      tags:
+      - State
+      summary: Returns the number of requests through the browser
+      operationId: getRequestCountBrowser
+      responses:
+        "500":
+          description: Unexpected server error
+          content:
+            '*/*':
+              schema:
+                $ref: '#/components/schemas/ErrorDTO'
+        "200":
+          description: OK
+          content:
+            text/plain: {}
+    put:
+      tags:
+      - State
+      summary: Update the number of requests through the browser by one
+      operationId: putRequestCountBrowser
+      responses:
+        "204":
+          description: No Content
+        "500":
+          description: Unexpected server error
+          content:
+            '*/*':
+              schema:
+                $ref: '#/components/schemas/ErrorDTO'
+  /request-count/api:
+    get:
+      tags:
+      - State
+      summary: Returns the number of requests through the API
+      operationId: getRequestCountApi
+      responses:
+        "500":
+          description: Unexpected server error
+          content:
+            '*/*':
+              schema:
+                $ref: '#/components/schemas/ErrorDTO'
+        "200":
+          description: OK
+          content:
+            text/plain: {}
+    put:
+      tags:
+      - State
+      summary: Update the number of requests through the API by one
+      operationId: putRequestCountApi
+      responses:
+        "204":
+          description: No Content
+        "500":
+          description: Unexpected server error
+          content:
+            '*/*':
+              schema:
+                $ref: '#/components/schemas/ErrorDTO'
+  /state/running:
+    post:
+      tags:
+      - State
+      summary: Sets state from INIT to RUNNING
+      operationId: postStateRunning
+      responses:
+        "204":
+          description: No Content
+        "409":
+          description: The transition cannot be executed
+        "500":
+          description: Unexpected server error
+          content:
+            '*/*':
+              schema:
+                $ref: '#/components/schemas/ErrorDTO'
+  /run-log:
+    get:
+      tags:
+      - State
+      summary: Returns state transitions run log
+      operationId: getRunLog
+      responses:
+        "500":
+          description: Unexpected server error
+          content:
+            '*/*':
+              schema:
+                $ref: '#/components/schemas/ErrorDTO'
+        "200":
+          description: OK
+          content:
+            text/plain: {}
 components:
   schemas:
+    StateDTO:
+      type: object
+      properties:
+        state:
+          type: string
+          description: State
+          enum:
+          - INIT
+          - RUNNING
+          - PAUSED
+          - SHUTDOWN
     ErrorDTO:
       type: object
       properties:

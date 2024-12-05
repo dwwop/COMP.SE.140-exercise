@@ -13,4 +13,11 @@ public interface StateService {
 
     List<String> getRunLog();
 
+    int getRequestCountAPI();
+
+    int getRequestCountBrowser();
+
+    void updateRequestCountAPI();
+
+    void updateRequestCountBrowser();
 }
