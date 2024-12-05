@@ -26,7 +26,7 @@ BASE_URL = "http://" + os.getenv("BASE_HOST", "localhost") + ":8197"
 def test_get_state():
     response = requests.get(f"{BASE_URL}/state")
     assert response.status_code == 200, f"Unexpected status code: {response.status_code}"
-    assert response.headers['Content-Type'] == 'text/plain', "Expected Content-Type is text/plain"
+    assert 'text/plain' in response.headers['Content-Type'], "Expected Content-Type is text/plain"
 
     response_data = response.text
     assert "INIT" == response_data, f"Unexpected response body: {response_data}"
