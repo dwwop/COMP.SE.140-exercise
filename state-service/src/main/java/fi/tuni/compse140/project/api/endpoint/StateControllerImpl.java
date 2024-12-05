@@ -2,7 +2,6 @@ package fi.tuni.compse140.project.api.endpoint;
 
 import fi.tuni.compse140.project.api.dto.StateDTO;
 import fi.tuni.compse140.project.facade.StateFacade;
-import jakarta.ws.rs.core.Response;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -20,14 +19,14 @@ public class StateControllerImpl implements StateController {
     }
 
     @Override
-    public Response putState(StateDTO dto) {
+    public ResponseEntity<Void> putState(StateDTO dto) {
         facade.setState(dto.state());
-        return Response.noContent().build();
+        return ResponseEntity.noContent().build();
     }
 
     @Override
-    public Response postStateRunning() {
+    public ResponseEntity<Void> postStateRunning() {
         facade.setStateRunning();
-        return Response.noContent().build();
+        return ResponseEntity.noContent().build();
     }
 }
