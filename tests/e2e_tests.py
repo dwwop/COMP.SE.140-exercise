@@ -1,5 +1,6 @@
 import requests
 import os
+import pytest
 
 BASE_URL = "http://" + os.getenv("BASE_HOST", "localhost") + ":8197"
 
