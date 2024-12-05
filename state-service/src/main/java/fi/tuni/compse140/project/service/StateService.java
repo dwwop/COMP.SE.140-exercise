@@ -4,4 +4,8 @@ import fi.tuni.compse140.project.model.State;
 
 public interface StateService {
     State getState();
+
+    void setState(State state);
+
+    void setStateRunning();
 }
