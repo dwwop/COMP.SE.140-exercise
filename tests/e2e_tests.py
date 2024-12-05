@@ -3,7 +3,7 @@ import os
 
 BASE_URL = "http://" + os.getenv("BASE_HOST", "localhost") + ":8197"
 
-def test_endpoint_1():
+def test_request():
     response = requests.get(f"{BASE_URL}/request")
     assert response.status_code == 200, f"Unexpected status code: {response.status_code}"
     try:
@@ -20,7 +20,14 @@ def test_endpoint_1():
     assert "diskSpace" in response_data[0]
     assert "lastBootTime" in response_data[0]
 
-# def test_endpoint_2():
-#     response = requests.get(f"{BASE_URL}/api/endpoint2")
-#     assert response.status_code == 200
-#     assert response.text == "expected_content"
+
+BASE_URL = "http://" + os.getenv("BASE_HOST", "localhost") + ":8197"
+
+def test_get_state():
+    response = requests.get(f"{BASE_URL}/state")
+    assert response.status_code == 200, f"Unexpected status code: {response.status_code}"
+    assert response.headers['Content-Type'] == 'text/plain', "Expected Content-Type is text/plain"
+
+    response_data = response.text
+    assert "INIT" == response_data, f"Unexpected response body: {response_data}"
+
