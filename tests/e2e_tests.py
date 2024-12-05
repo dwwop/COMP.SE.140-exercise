@@ -2,6 +2,7 @@ import requests
 import os
 import pytest
 import time
+import subprocess
 
 API_GATEWAY_URL = "http://" + os.getenv("BASE_HOST", "localhost") + ":8197"
 BROWSER_URL =  "http://" + os.getenv("BASE_HOST", "localhost") + ":8198"
@@ -101,10 +102,10 @@ def test_request_count():
 
 @pytest.mark.run(order=5)
 def test_shutdown_service():
-    response = requests.put(f"{BROWSER_URL}/state", json={'state': 'SHUTDOWN'})
+    response = requests.put(f"{API_GATEWAY_URL}/state", json={'state': 'SHUTDOWN'})
     assert response.status_code == 204, f"Unexpected status code: {response.status_code}"
 
-    time.sleep(3)
+    time.sleep(5)
     
     try:
         result = subprocess.run(
