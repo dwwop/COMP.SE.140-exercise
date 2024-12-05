@@ -1,0 +1,54 @@
+openapi: 3.0.1
+info:
+  title: State service
+  description: "State service handles state information and update, request count\
+    \ information and start of system information"
+  contact:
+    name: Dávid Laurovič
+    email: david.laurovic@tuni.fi
+  license:
+    name: Apache 2.0
+    url: https://www.apache.org/licenses/LICENSE-2.0.html
+  version: "1.0"
+servers:
+  - url: "{scheme}://{server}:{port}"
+    variables:
+      scheme:
+        default: http
+        enum:
+          - http
+          - https
+      server:
+        default: localhost
+      port:
+        default: "8080"
+tags:
+  - name: State
+    description: Controller for state information
+paths:
+  /:
+    get:
+      tags:
+        - State
+      summary: Returns system state
+      operationId: getState
+      responses:
+        "200":
+          description: OK
+          content:
+            text/plain: { }
+        "500":
+          description: Unexpected server error
+          content:
+            '*/*':
+              schema:
+                $ref: '#/components/schemas/ErrorDTO'
+components:
+  schemas:
+    ErrorDTO:
+      type: object
+      properties:
+        errorMessage:
+          type: string
+          description: Error message
+          example: Exception occurred when reading address id
