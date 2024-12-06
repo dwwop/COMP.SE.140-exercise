@@ -20,7 +20,7 @@ build:
       - ./
     expire_in: 1 hour
     
-static-analysis-java:
+static-analysis-service-1:
   stage: static-analysis
   tags:
     - project
@@ -35,6 +35,24 @@ static-analysis-java:
     reports:
       codequality:
         - system-info-service-1-java/target/gl-code-quality-report.json
+    expire_in: 1 hour
+
+
+static-analysis-state-service:
+  stage: static-analysis
+  tags:
+    - project
+  image:
+    maven:3.9.9-eclipse-temurin-23
+  script:
+    - cd state-service
+    - mvn checkstyle:checkstyle
+    - mvn de.chkal.maven:gitlab-code-quality-plugin:generate
+  artifacts:
+    name: "static-analysis-results"
+    reports:
+      codequality:
+        - state-service/target/gl-code-quality-report.json
     expire_in: 1 hour
 
 static-analysis-dotnet:
@@ -69,7 +87,7 @@ test_e2e:
     - apk add --no-cache python3 py3-pip
     - pip3 install -r tests/requirements.txt --break-system-packages
     - $DOCKER_COMPOSE_COMMAND up -d
-    - sleep 15
+    - sleep 20
     - export BASE_HOST="195.148.21.89"
   script:
     - pytest tests/e2e_tests.py
