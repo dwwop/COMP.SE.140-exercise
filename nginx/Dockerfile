@@ -1,7 +1,7 @@
 FROM fabiocicerchia/nginx-lua:1.27.2-debian12.7 AS nginx
 
 COPY ./html /usr/share/nginx/html
-COPY ./nginx.conf /etc/nginx/nginx.conf
+COPY ./nginx.conf /etc/nginx/nginx.conf.template
 
 RUN apt-get update && apt-get install -y sudo
 RUN luarocks install lua-resty-http

@@ -37,9 +37,12 @@ services:
       - "8197:81"
     networks:
       - exercise
+    environment:
+      - TEST_ENV=${TEST_ENV-false}
     depends_on:
       - service-1
       - service-2
+    command: /bin/bash -c "envsubst '$${TEST_ENV}' < /etc/nginx/nginx.conf.template > /etc/nginx/nginx.conf && nginx -g 'daemon off;'"
 
 networks:
   exercise:
