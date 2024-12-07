@@ -55,8 +55,6 @@ public class StateServiceImpl implements StateService {
         if (State.INIT.equals(StateServiceImpl.state)) {
             addToRunLog(State.INIT, State.RUNNING);
             StateServiceImpl.state = State.RUNNING;
-        } else {
-            throw new InvalidTransitionException(StateServiceImpl.state, State.RUNNING);
         }
     }
 
