@@ -1,6 +1,5 @@
 FROM fabiocicerchia/nginx-lua:1.27.2-debian12.7 AS nginx
 
-COPY ./.htpasswd /etc/nginx/.htpasswd
 COPY ./html /usr/share/nginx/html
 COPY ./nginx.conf /etc/nginx/nginx.conf
 

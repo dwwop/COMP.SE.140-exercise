@@ -6,7 +6,5 @@ import lombok.extern.jackson.Jacksonized;
 
 @Builder(builderClassName = "Builder")
 @Jacksonized
-public record ErrorDTO(
-        @Schema(description = "Error message", example = "Unable to verify credentials")
-        String errorMessage) {
+public record AuthRespDTO(@Schema(description = "Information about authentication") boolean authenticated) {
 }

@@ -61,22 +61,37 @@
         .stats span {
             font-weight: bold;
         }
+
+        #errorMessage {
+            color: red;
+            margin-top: 10px;
+        }
     </style>
 
     <script>
         function sendRequest() {
             document.getElementById('responseText').value = "";
+            document.getElementById('errorMessage').value = "";
             fetch('/service1')
-                .then(response => response.text())
-                .then(data => {
-                    if (data) {
-                        document.getElementById('responseText').value = JSON.stringify(JSON.parse(data), undefined, 4);
+                .then(response => {
+                    if (response.ok) {
+                        return response.text().then(data => document.getElementById('responseText').value = JSON.stringify(JSON.parse(data), undefined, 4));
+                    } else {
+                        return response.text().then(data => document.getElementById('errorMessage').textContent = "Error: " + data);
                     }
                 });
         }
 
         function stopSystem() {
-            fetch('/shutdown', { method: 'POST' });
+            document.getElementById('errorMessage').value = "";
+            fetch('/shutdown', { method: 'POST' })
+                .then(response => {
+                    if (!response.ok) {
+                        return response.text().then(data => {
+                            document.getElementById('errorMessage').textContent = "Error: " + data;
+                        });
+                    };
+                })
         }
 
         function updateRequestCounts() {
@@ -111,6 +126,8 @@
         <button onclick="sendRequest()">REQUEST</button>
         <button onclick="stopSystem()">STOP</button>
     </div>
+
+    <div id="errorMessage"></div>
     <textarea id="responseText" cols="50" rows="10" disabled class="language-json"></textarea>
 
     <div class="stats">
