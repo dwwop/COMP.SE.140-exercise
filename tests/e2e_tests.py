@@ -12,7 +12,7 @@ def test_request():
     response = requests.get(f"{API_GATEWAY_URL}/request")
     assert response.status_code == 200, f"Unexpected status code: {response.status_code}"
     assert 'text/plain' in response.headers['Content-Type'], "Expected Content-Type is text/plain"
-    response_data = response.text()
+    response_data = response.text
 
     assert "ipAddress" in response_data
     assert "processes" in response_data
