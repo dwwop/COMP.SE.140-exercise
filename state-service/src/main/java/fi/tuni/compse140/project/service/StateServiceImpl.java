@@ -20,7 +20,7 @@ public class StateServiceImpl implements StateService {
     private static final List<String> runLog = new ArrayList<>();
     private static int requestCountApi = 0;
     private static  int requestCountBrowser = 0;
-    private NginxGateway nginxGateway;
+    private final NginxGateway nginxGateway;
 
     @Autowired
     public StateServiceImpl(NginxGateway nginxGateway) {
@@ -35,6 +35,11 @@ public class StateServiceImpl implements StateService {
     @Override
     public void setState(State state) {
         if (validTransitions.get(StateServiceImpl.state).contains(state)) {
+
+            if (State.INIT.equals(state) && !State.INIT.equals(StateServiceImpl.state)) {
+                requestCountBrowser = 0;
+            }
+
             addToRunLog(StateServiceImpl.state, state);
             StateServiceImpl.state = state;
         } else if (!Objects.equals(StateServiceImpl.state, state)) {
