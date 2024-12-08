@@ -36,7 +36,7 @@ def test_get_state():
 
 @pytest.mark.run(order=2)
 def test_put_state():
-    response = requests.put(f"{API_GATEWAY_URL}/state", json={'state': 'RUNNING'})
+    response = requests.put(f"{API_GATEWAY_URL}/state", data="RUNNING")
     assert response.status_code == 409, f"Unexpected status code: {response.status_code}"
     try:
         response_data = response.json()
@@ -52,14 +52,14 @@ def test_put_state():
     response_data = response.text
     assert "RUNNING" == response_data, f"Unexpected response body: {response_data}"
 
-    response = requests.put(f"{API_GATEWAY_URL}/state", json={'state': 'PAUSED'})
+    response = requests.put(f"{API_GATEWAY_URL}/state", data="PAUSED")
     assert response.status_code == 204, f"Unexpected status code: {response.status_code}"
 
     response = requests.get(f"{API_GATEWAY_URL}/state")
     response_data = response.text
     assert "PAUSED" == response_data, f"Unexpected response body: {response_data}"
     
-    response = requests.put(f"{API_GATEWAY_URL}/state", json={'state': 'INVALID'})
+    response = requests.put(f"{API_GATEWAY_URL}/state", data="INVALID")
     assert response.status_code == 400, f"Unexpected status code: {response.status_code}"
 
 @pytest.mark.run(order=3)
@@ -102,7 +102,7 @@ def test_request_count():
 
 @pytest.mark.run(order=5)
 def test_shutdown_service():
-    response = requests.put(f"{API_GATEWAY_URL}/state", json={'state': 'SHUTDOWN'})
+    response = requests.put(f"{API_GATEWAY_URL}/state", data="SHUTDOWN")
     assert response.status_code == 204, f"Unexpected status code: {response.status_code}"
 
     time.sleep(5)
