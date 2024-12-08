@@ -1,5 +1,6 @@
 package fi.tuni.compse140.project.service;
 
+import fi.tuni.compse140.project.exception.InternalException;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Value;
@@ -34,5 +35,25 @@ public class NginxGatewayImpl implements NginxGateway {
         } catch (IOException | InterruptedException | URISyntaxException e) {
             LOG.error(String.valueOf(e));
         }
+    }
+
+    @Override
+    public String service1() {
+        HttpClient client = HttpClient.newHttpClient();
+
+        String responseBody = "";
+        try {
+            HttpRequest request = HttpRequest.newBuilder()
+                    .uri(new URI("http://" + apiHost + "/internal_service1"))
+                    .GET()
+                    .build();
+
+            HttpResponse<String> response = client.send(request, HttpResponse.BodyHandlers.ofString());
+            return response.body();
+        } catch (IOException | InterruptedException | URISyntaxException e) {
+            LOG.error(String.valueOf(e));
+            throw new InternalException("Error during communication with backend services");
+        }
+
     }
 }

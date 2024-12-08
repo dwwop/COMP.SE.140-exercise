@@ -70,4 +70,10 @@ public class StateFacadeImpl implements StateFacade {
             System.exit(0);
         }).start();
     }
+
+    @Override
+    public String getRequest() {
+        String request = service.request();
+        return request.replaceAll("[{}\"]", "");
+    }
 }

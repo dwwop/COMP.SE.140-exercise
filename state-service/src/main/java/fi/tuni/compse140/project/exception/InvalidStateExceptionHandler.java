@@ -14,7 +14,8 @@ public class InvalidStateExceptionHandler extends ResponseEntityExceptionHandler
     @ExceptionHandler(value = {InvalidStateException.class})
     protected ResponseEntity<Object> handleConflict(
             RuntimeException ex, WebRequest request) {
-        ErrorDTO error = new ErrorDTO(ex.getMessage());
-        return handleExceptionInternal(ex, error, new HttpHeaders(), HttpStatus.BAD_REQUEST, request);
+        HttpHeaders headers = new HttpHeaders();
+        headers.add(HttpHeaders.CONTENT_TYPE, "text/plain");
+        return handleExceptionInternal(ex, ex.getMessage(), headers, HttpStatus.BAD_REQUEST, request);
     }
 }

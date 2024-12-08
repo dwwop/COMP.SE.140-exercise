@@ -1,10 +1,8 @@
 package fi.tuni.compse140.project.api.endpoint;
 
 
-import fi.tuni.compse140.project.api.dto.ErrorDTO;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.media.Content;
-import io.swagger.v3.oas.annotations.media.Schema;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import io.swagger.v3.oas.annotations.responses.ApiResponses;
 import io.swagger.v3.oas.annotations.tags.Tag;
@@ -26,6 +24,7 @@ public interface StateController {
     String GET_REQUEST_COUNT_BROWSER = "Returns the number of requests through the browser";
     String PUT_REQUEST_COUNT_BROWSER = "Update the number of requests through the browser by one";
     String SHUTDOWN = "Shutdowns service 2s after receiving request";
+    String GET_SYSTEM_INFO = "Gets system info from underlying service-1";
 
     @GetMapping("state")
     @Operation(summary = GET_STATE)
@@ -36,8 +35,7 @@ public interface StateController {
             ),
             @ApiResponse(
                     responseCode = SERVER_ERROR,
-                    description = SERVER_ERROR_DESCRIPTION,
-                    content = @Content(schema = @Schema(implementation = ErrorDTO.class))),
+                    description = SERVER_ERROR_DESCRIPTION),
     })
     ResponseEntity<String> getState();
 
@@ -53,8 +51,7 @@ public interface StateController {
             ),
             @ApiResponse(
                     responseCode = SERVER_ERROR,
-                    description = SERVER_ERROR_DESCRIPTION,
-                    content = @Content(schema = @Schema(implementation = ErrorDTO.class))),
+                    description = SERVER_ERROR_DESCRIPTION)
     })
     ResponseEntity<Void> putState(@RequestBody String state);
 
@@ -71,8 +68,7 @@ public interface StateController {
             ),
             @ApiResponse(
                     responseCode = SERVER_ERROR,
-                    description = SERVER_ERROR_DESCRIPTION,
-                    content = @Content(schema = @Schema(implementation = ErrorDTO.class))),
+                    description = SERVER_ERROR_DESCRIPTION)
     })
     ResponseEntity<Void> postStateRunning();
 
@@ -85,8 +81,7 @@ public interface StateController {
             ),
             @ApiResponse(
                     responseCode = SERVER_ERROR,
-                    description = SERVER_ERROR_DESCRIPTION,
-                    content = @Content(schema = @Schema(implementation = ErrorDTO.class))),
+                    description = SERVER_ERROR_DESCRIPTION)
     })
     ResponseEntity<String> getRunLog();
 
@@ -100,8 +95,7 @@ public interface StateController {
             ),
             @ApiResponse(
                     responseCode = SERVER_ERROR,
-                    description = SERVER_ERROR_DESCRIPTION,
-                    content = @Content(schema = @Schema(implementation = ErrorDTO.class))),
+                    description = SERVER_ERROR_DESCRIPTION)
     })
     ResponseEntity<String> getRequestCountApi();
 
@@ -114,8 +108,7 @@ public interface StateController {
             ),
             @ApiResponse(
                     responseCode = SERVER_ERROR,
-                    description = SERVER_ERROR_DESCRIPTION,
-                    content = @Content(schema = @Schema(implementation = ErrorDTO.class))),
+                    description = SERVER_ERROR_DESCRIPTION)
     })
     ResponseEntity<String> getRequestCountBrowser();
 
@@ -127,8 +120,7 @@ public interface StateController {
             ),
             @ApiResponse(
                     responseCode = SERVER_ERROR,
-                    description = SERVER_ERROR_DESCRIPTION,
-                    content = @Content(schema = @Schema(implementation = ErrorDTO.class))),
+                    description = SERVER_ERROR_DESCRIPTION)
     })
     ResponseEntity<Void> putRequestCountApi();
 
@@ -140,8 +132,7 @@ public interface StateController {
             ),
             @ApiResponse(
                     responseCode = SERVER_ERROR,
-                    description = SERVER_ERROR_DESCRIPTION,
-                    content = @Content(schema = @Schema(implementation = ErrorDTO.class))),
+                    description = SERVER_ERROR_DESCRIPTION)
     })
     ResponseEntity<Void> putRequestCountBrowser();
 
@@ -153,8 +144,20 @@ public interface StateController {
                     responseCode = NO_CONTENT
             ),
             @ApiResponse(responseCode = SERVER_ERROR,
-                    description = SERVER_ERROR_DESCRIPTION,
-                    content = @Content(schema = @Schema(implementation = ErrorDTO.class))),
+                    description = SERVER_ERROR_DESCRIPTION)
     })
     ResponseEntity<Void> shutdown();
+
+
+    @GetMapping("request")
+    @Operation(summary = GET_SYSTEM_INFO)
+    @ApiResponses({
+            @ApiResponse(
+                    responseCode = OK
+            ),
+            @ApiResponse(
+                    responseCode = SERVER_ERROR,
+                    description = SERVER_ERROR_DESCRIPTION)
+    })
+    ResponseEntity<String> getRequest();
 }

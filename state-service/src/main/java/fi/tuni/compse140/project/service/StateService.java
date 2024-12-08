@@ -20,4 +20,6 @@ public interface StateService {
     void updateRequestCountAPI();
 
     void updateRequestCountBrowser();
+
+    String request();
 }

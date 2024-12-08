@@ -60,4 +60,9 @@ public class StateControllerImpl implements StateController {
         facade.shutdown();
         return ResponseEntity.noContent().build();
     }
+
+    @Override
+    public ResponseEntity<String> getRequest() {
+        return ResponseEntity.ok(facade.getRequest());
+    }
 }

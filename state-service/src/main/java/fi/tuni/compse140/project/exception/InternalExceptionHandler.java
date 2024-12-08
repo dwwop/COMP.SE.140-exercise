@@ -14,8 +14,9 @@ public class InternalExceptionHandler extends ResponseEntityExceptionHandler {
     @ExceptionHandler(value = {InternalException.class})
     protected ResponseEntity<Object> handleConflict(
             RuntimeException ex, WebRequest request) {
-        ErrorDTO error = new ErrorDTO(ex.getMessage());
-        return handleExceptionInternal(ex, error, new HttpHeaders(), HttpStatus.INTERNAL_SERVER_ERROR, request);
+        HttpHeaders headers = new HttpHeaders();
+        headers.add(HttpHeaders.CONTENT_TYPE, "text/plain");
+        return handleExceptionInternal(ex, ex.getMessage(), headers, HttpStatus.INTERNAL_SERVER_ERROR, request);
     }
 
 }

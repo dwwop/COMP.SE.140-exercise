@@ -14,8 +14,9 @@ public class InvalidTransitionExceptionHandler extends ResponseEntityExceptionHa
     @ExceptionHandler(value = {InvalidTransitionException.class})
     protected ResponseEntity<Object> handleConflict(
             RuntimeException ex, WebRequest request) {
-        ErrorDTO error = new ErrorDTO(ex.getMessage());
-        return handleExceptionInternal(ex, error, new HttpHeaders(), HttpStatus.CONFLICT, request);
+        HttpHeaders headers = new HttpHeaders();
+        headers.add(HttpHeaders.CONTENT_TYPE, "text/plain");
+        return handleExceptionInternal(ex, ex.getMessage(), headers, HttpStatus.CONFLICT, request);
     }
 
 }

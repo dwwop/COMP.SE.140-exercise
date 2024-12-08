@@ -45,10 +45,6 @@ public class StateServiceImpl implements StateService {
         } else if (!Objects.equals(StateServiceImpl.state, state)) {
             throw new InvalidTransitionException(StateServiceImpl.state, state);
         }
-
-        if (State.SHUTDOWN.equals(StateServiceImpl.state)) {
-            nginxGateway.shutdown();
-        }
     }
 
     private void addToRunLog(State from, State to) {
@@ -87,4 +83,10 @@ public class StateServiceImpl implements StateService {
     public void updateRequestCountBrowser() {
         requestCountBrowser += 1;
     }
+
+    @Override
+    public String request() {
+        return nginxGateway.service1();
+    }
+
 }

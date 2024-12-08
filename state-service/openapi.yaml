@@ -14,17 +14,17 @@ servers:
 - url: "{scheme}://{server}:{port}"
   variables:
     scheme:
+      default: http
       enum:
       - http
       - https
-      default: http
     server:
       default: localhost
     port:
       default: "8080"
 tags:
-  - name: Auth
-    description: Controller for authentication
+- name: Auth
+  description: Controller for authentication
 - name: State
   description: Controller for state information
 paths:
@@ -35,16 +35,16 @@ paths:
       summary: Returns system state
       operationId: getState
       responses:
+        "200":
+          description: OK
+          content:
+            text/plain: {}
         "500":
           description: Unexpected server error
           content:
             '*/*':
               schema:
-                $ref: '#/components/schemas/ErrorDTO'
-        "200":
-          description: OK
-          content:
-            text/plain: {}
+                type: string
     put:
       tags:
       - State
@@ -63,10 +63,6 @@ paths:
           description: The transition cannot be executed
         "500":
           description: Unexpected server error
-          content:
-            '*/*':
-              schema:
-                $ref: '#/components/schemas/ErrorDTO'
   /request-count/browser:
     get:
       tags:
@@ -74,16 +70,16 @@ paths:
       summary: Returns the number of requests through the browser
       operationId: getRequestCountBrowser
       responses:
+        "200":
+          description: OK
+          content:
+            text/plain: {}
         "500":
           description: Unexpected server error
           content:
             '*/*':
               schema:
-                $ref: '#/components/schemas/ErrorDTO'
-        "200":
-          description: OK
-          content:
-            text/plain: {}
+                type: string
     put:
       tags:
       - State
@@ -94,10 +90,6 @@ paths:
           description: No Content
         "500":
           description: Unexpected server error
-          content:
-            '*/*':
-              schema:
-                $ref: '#/components/schemas/ErrorDTO'
   /request-count/api:
     get:
       tags:
@@ -105,16 +97,16 @@ paths:
       summary: Returns the number of requests through the API
       operationId: getRequestCountApi
       responses:
+        "200":
+          description: OK
+          content:
+            text/plain: {}
         "500":
           description: Unexpected server error
           content:
             '*/*':
               schema:
-                $ref: '#/components/schemas/ErrorDTO'
-        "200":
-          description: OK
-          content:
-            text/plain: {}
+                type: string
     put:
       tags:
       - State
@@ -125,10 +117,6 @@ paths:
           description: No Content
         "500":
           description: Unexpected server error
-          content:
-            '*/*':
-              schema:
-                $ref: '#/components/schemas/ErrorDTO'
   /state/running:
     post:
       tags:
@@ -142,10 +130,6 @@ paths:
           description: The transition cannot be executed
         "500":
           description: Unexpected server error
-          content:
-            '*/*':
-              schema:
-                $ref: '#/components/schemas/ErrorDTO'
   /shutdown:
     post:
       tags:
@@ -157,14 +141,10 @@ paths:
           description: No Content
         "500":
           description: Unexpected server error
-          content:
-            '*/*':
-              schema:
-                $ref: '#/components/schemas/ErrorDTO'
   /auth/verify:
     post:
       tags:
-        - Auth
+      - Auth
       summary: Verifies username and password and changes system state to INIT upon
         success
       operationId: verify
@@ -194,25 +174,37 @@ paths:
       summary: Returns state transitions run log
       operationId: getRunLog
       responses:
+        "200":
+          description: OK
+          content:
+            text/plain: {}
         "500":
           description: Unexpected server error
           content:
             '*/*':
               schema:
-                $ref: '#/components/schemas/ErrorDTO'
+                type: string
+  /request:
+    get:
+      tags:
+      - State
+      summary: Gets system info from underlying service-1
+      operationId: getRequest
+      responses:
         "200":
           description: OK
           content:
-            text/plain: {}
+            '*/*':
+              schema:
+                type: string
+        "500":
+          description: Unexpected server error
+          content:
+            '*/*':
+              schema:
+                type: string
 components:
   schemas:
-    ErrorDTO:
-      type: object
-      properties:
-        errorMessage:
-          type: string
-          description: Error message
-          example: Unable to verify credentials
     AuthDTO:
       type: object
       properties:
@@ -222,6 +214,13 @@ components:
         password:
           type: string
           description: Password
+    ErrorDTO:
+      type: object
+      properties:
+        errorMessage:
+          type: string
+          description: Error message
+          example: Unable to verify credentials
     AuthRespDTO:
       type: object
       properties:
