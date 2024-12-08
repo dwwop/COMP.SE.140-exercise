@@ -1,7 +1,6 @@
 package fi.tuni.compse140.project.api.endpoint;
 
 import fi.tuni.compse140.project.facade.StateFacade;
-import fi.tuni.compse140.project.model.State;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -19,7 +18,7 @@ public class StateControllerImpl implements StateController {
     }
 
     @Override
-    public ResponseEntity<Void> putState(State state) {
+    public ResponseEntity<Void> putState(String state) {
         facade.setState(state);
         return ResponseEntity.noContent().build();
     }

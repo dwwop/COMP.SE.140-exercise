@@ -1,5 +1,6 @@
 package fi.tuni.compse140.project.facade;
 
+import fi.tuni.compse140.project.exception.InvalidStateException;
 import fi.tuni.compse140.project.model.State;
 import fi.tuni.compse140.project.service.StateService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,8 +21,12 @@ public class StateFacadeImpl implements StateFacade {
     }
 
     @Override
-    public void setState(State state) {
-        service.setState(state);
+    public void setState(String state) {
+        try {
+            service.setState(State.valueOf(state));
+        } catch (IllegalArgumentException e) {
+            throw new InvalidStateException(state);
+        }
     }
 
     @Override

@@ -2,7 +2,6 @@ package fi.tuni.compse140.project.api.endpoint;
 
 
 import fi.tuni.compse140.project.api.dto.ErrorDTO;
-import fi.tuni.compse140.project.model.State;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.media.Content;
 import io.swagger.v3.oas.annotations.media.Schema;
@@ -42,7 +41,7 @@ public interface StateController {
     })
     ResponseEntity<String> getState();
 
-    @PutMapping(value = "state", consumes = MediaType.TEXT_PLAIN_VALUE)
+    @PutMapping(value = "state")
     @Operation(summary = PUT_STATE)
     @ApiResponses({
             @ApiResponse(
@@ -57,7 +56,7 @@ public interface StateController {
                     description = SERVER_ERROR_DESCRIPTION,
                     content = @Content(schema = @Schema(implementation = ErrorDTO.class))),
     })
-    ResponseEntity<Void> putState(@RequestBody State state);
+    ResponseEntity<Void> putState(@RequestBody String state);
 
 
     @PostMapping("state/running")

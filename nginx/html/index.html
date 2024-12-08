@@ -71,7 +71,7 @@
     <script>
         function sendRequest() {
             document.getElementById('responseText').value = "";
-            document.getElementById('errorMessage').value = "";
+            document.getElementById('errorMessage').textContent = "";
             fetch('/service1')
                 .then(response => {
                     if (response.ok) {
@@ -83,7 +83,7 @@
         }
 
         function stopSystem() {
-            document.getElementById('errorMessage').value = "";
+            document.getElementById('errorMessage').textContent = "";
             fetch('/shutdown', { method: 'POST' })
                 .then(response => {
                     if (!response.ok) {

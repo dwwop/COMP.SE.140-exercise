@@ -14,10 +14,10 @@ servers:
 - url: "{scheme}://{server}:{port}"
   variables:
     scheme:
-      default: http
       enum:
       - http
       - https
+      default: http
     server:
       default: localhost
     port:
@@ -54,7 +54,7 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/StateDTO'
+              type: string
         required: true
       responses:
         "204":
@@ -206,17 +206,6 @@ paths:
             text/plain: {}
 components:
   schemas:
-    StateDTO:
-      type: object
-      properties:
-        state:
-          type: string
-          description: State
-          enum:
-          - INIT
-          - RUNNING
-          - PAUSED
-          - SHUTDOWN
     ErrorDTO:
       type: object
       properties:
