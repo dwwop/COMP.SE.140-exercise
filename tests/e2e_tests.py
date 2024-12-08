@@ -11,6 +11,7 @@ BROWSER_URL =  "http://" + os.getenv("BASE_HOST", "localhost") + ":8198"
 def test_request():
     response = requests.get(f"{API_GATEWAY_URL}/request")
     assert response.status_code == 200, f"Unexpected status code: {response.status_code}"
+    assert 'text/plain' in response.headers['Content-Type'], "Expected Content-Type is text/plain"
     try:
         response_data = response.json()
     except ValueError:
@@ -38,12 +39,9 @@ def test_get_state():
 def test_put_state():
     response = requests.put(f"{API_GATEWAY_URL}/state", data="RUNNING")
     assert response.status_code == 409, f"Unexpected status code: {response.status_code}"
-    try:
-        response_data = response.json()
-    except ValueError:
-        assert False, "Response is not a valid JSON"
-    
-    assert response_data["errorMessage"] == "The system cannot transition directly from INIT to RUNNING"
+    response_data = response.text
+
+    assert response_data == "The system cannot transition directly from INIT to RUNNING"
 
     response = requests.post(f"{API_GATEWAY_URL}/state/running")
     assert response.status_code == 204, f"Unexpected status code: {response.status_code}"
